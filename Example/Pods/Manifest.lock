@@ -1,0 +1,16 @@
+PODS:
+  - KiwiPublicPod (0.1.0)
+
+DEPENDENCIES:
+  - KiwiPublicPod (from `../`)
+
+EXTERNAL SOURCES:
+  KiwiPublicPod:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KiwiPublicPod: d61abbdf4170d17ecf6be7c24b740db055b12215
+
+PODFILE CHECKSUM: 284f26cfccb8e0b8228bb038829ee5334edfb150
+
+COCOAPODS: 1.16.2
