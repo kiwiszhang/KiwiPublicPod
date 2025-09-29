@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KiwiPublicPod
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 全局黑色状态栏显示
+        StatusBarManager.shared.isHidden = false
+        StatusBarManager.shared.style = .lightContent
+        StatusBarManager.shared.updateStatusBar()
+        
+        // 设置Tabbar
+        setupTabBarAppearance()
+
+        // 创建 window
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let homeVC = MainTabBarController()
+        window?.rootViewController = homeVC
+        window?.makeKeyAndVisible()
+
         return true
     }
 

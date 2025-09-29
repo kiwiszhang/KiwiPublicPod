@@ -1,6 +1,0 @@
-framework module Pods_KiwiPublicPod_Tests {
-  umbrella header "Pods-KiwiPublicPod_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

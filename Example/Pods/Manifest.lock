@@ -1,16 +1,32 @@
 PODS:
-  - KiwiPublicPod (0.1.0)
+  - KiwiPublicPod (0.1.1):
+    - Localize-Swift (~> 3.2.0)
+    - SnapKit (~> 5.7.0)
+  - Localize-Swift (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
+    - Localize-Swift/UIKit (= 3.2.0)
+  - Localize-Swift/LocalizeSwiftCore (3.2.0)
+  - Localize-Swift/UIKit (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore
+  - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - KiwiPublicPod (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Localize-Swift
+    - SnapKit
 
 EXTERNAL SOURCES:
   KiwiPublicPod:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KiwiPublicPod: d61abbdf4170d17ecf6be7c24b740db055b12215
+  KiwiPublicPod: ee9ad3b1d5ad91d9ea1f31b1857084932814149b
+  Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 284f26cfccb8e0b8228bb038829ee5334edfb150
+PODFILE CHECKSUM: 6c3ac00f56b391337740f712907fc5a08a2e3205
 
 COCOAPODS: 1.16.2
