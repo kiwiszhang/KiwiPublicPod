@@ -15,7 +15,7 @@ open class CustomNavigationController: UINavigationController, UIGestureRecogniz
     private lazy var backBtn: NavigationBackBtn = {
         let backBtn = NavigationBackBtn(
             frame: CGRect(x: 0, y: 0, width: 44, height: 44),
-            img: ProjectBaseResource.image(named: "nav-back-btn")!,
+            img: KiwiPublicPodResource.image(named: "nav-back-btn")!,
             obj: self,
             methord: #selector(backBtnTapped)
         )

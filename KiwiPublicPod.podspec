@@ -34,9 +34,10 @@ TODO: Add long description of the pod here.
   s.swift_versions   = '5'
   s.source_files = 'KiwiPublicPod/Classes/**/*'
   
-   s.resource_bundles = {
-     'KiwiPublicPod' => ['KiwiPublicPod/Assets/*']
-   }
+  s.resource_bundles = {
+    'KiwiPublicPod' => ['KiwiPublicPod/Assets/*']
+  }
+
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

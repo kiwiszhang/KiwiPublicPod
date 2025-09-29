@@ -24,7 +24,7 @@ open class EmptyView: SuperView {
             make.height.equalTo(20.h)
             make.top.equalTo(emptyImg.snp.bottom)
         }
-        emptyImg.image(ProjectBaseResource.image(named: "sunmary_empty"))
+        emptyImg.image(KiwiPublicPodResource.image(named: "sunmary_empty"))
     }
     // MARK: -  =======================actions========================
     open func refreshData(emptyImage:UIImage,emptyStr:String){
