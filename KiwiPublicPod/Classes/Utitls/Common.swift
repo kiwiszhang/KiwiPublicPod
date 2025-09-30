@@ -7,18 +7,11 @@
 //
 
 import UIKit
+@_exported import SnapKit
 import Localize_Swift;
-// MARK: - APP 配置相关
-let kkMainColor = "#06D094"
-let kkMainTextColor = "#202124"
-let kkTextSubColor = "5B5F65"
-let kkLightColor = "E0E2E5"
-
-let kkSeparatorStr = "**.._&_&7=="
-
 // MARK: - 系统相关
 /// 获取keyWindow
-func kkKeyWindow() -> UIWindow? {
+public func kkKeyWindow() -> UIWindow? {
     if #available(iOS 13.0, *) {
         return UIApplication.shared.connectedScenes
             .first(where: { $0 is UIWindowScene })
@@ -29,19 +22,19 @@ func kkKeyWindow() -> UIWindow? {
     }
 }
 /// 获取UIApplication.shared.delegate
-let kkAppDelegate = UIApplication.shared.delegate
+public let kkAppDelegate = UIApplication.shared.delegate
 /// 获取跟控制器
-func kkRootViewController() -> UIViewController? {
+public func kkRootViewController() -> UIViewController? {
     UIApplication.shared.delegate?.window??.rootViewController
 }
 /// 获取APP名
-let kkAppName = Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String
+public let kkAppName = Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String
 /// 获取APP版本
-let kkAppVersion = (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? "1.0.0"
+public let kkAppVersion = (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? "1.0.0"
 /// 获取系统版本
-let kkSystemVersion = Float(UIDevice.current.systemVersion) ?? 0
+public let kkSystemVersion = Float(UIDevice.current.systemVersion) ?? 0
 /// 设备型号（iPhone15,2 等内部代号）
-var kkDeviceModelCode: String {
+public var kkDeviceModelCode: String {
     var systemInfo = utsname()
     uname(&systemInfo)
     return String(bytes: Data(bytes: &systemInfo.machine, count: Int(_SYS_NAMELEN)),
@@ -49,25 +42,25 @@ var kkDeviceModelCode: String {
         .trimmingCharacters(in: .controlCharacters) ?? "Unknown"
 }
 /// build号
-var kkBuildNumber: String {
+public var kkBuildNumber: String {
     Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "Unknown"
 }
 /// 设备语言
-var kkLanguage: String {
+public var kkLanguage: String {
     Locale.preferredLanguages.first ?? "Unknown"
 }
 /// 设备地区
-var kkRegion: String {
+public var kkRegion: String {
     Locale.current.regionCode ?? "Unknown"
 }
-let kkiOSVersionLater = { kkSystemVersion >= $0 }
+public let kkiOSVersionLater = { kkSystemVersion >= $0 }
 /// 设备名字
-let kkDeviceName = UIDevice.current.name
+public let kkDeviceName = UIDevice.current.name
 /// 获取项目名
-let kkProjectName = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
-let AppID = "6752841772"
+public let kkProjectName = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
+public let AppID = "6752841772"
 /// 获取Store商店地址
-let kkAPPStoreAddress = "itms-apps://itunes.apple.com/us/app/id\(AppID)?mt=8"
+public let kkAPPStoreAddress = "itms-apps://itunes.apple.com/us/app/id\(AppID)?mt=8"
 /// 设备ID
 private var UUID: String {
     get {
@@ -77,7 +70,7 @@ private var UUID: String {
     }
 }
 /// 存在系统里面的设备ID
-var kkDeviceID: String {
+public var kkDeviceID: String {
     get {
         let deviceID = KeyChainManager.keyChainReadData(identifier: kkProjectName + Bundle.main.bundleIdentifier!)
         if deviceID == nil {
@@ -90,13 +83,13 @@ var kkDeviceID: String {
 
 
 // MARK: - 尺寸相关
-let kkScreenWidth = UIScreen.main.bounds.size.width
-let kkScreenHeight = UIScreen.main.bounds.size.height
-let kkTABBAR_HEIGHT = 49.0
-let kkNAV_HEIGHT = 44.0
+public let kkScreenWidth = UIScreen.main.bounds.size.width
+public let kkScreenHeight = UIScreen.main.bounds.size.height
+public let kkTABBAR_HEIGHT = 49.0
+public let kkNAV_HEIGHT = 44.0
 
 /// top安全区域
-let kkSAFE_AREA_TOP: CGFloat = {
+public let kkSAFE_AREA_TOP: CGFloat = {
     guard let window = UIApplication.shared.connectedScenes
             .compactMap({ $0 as? UIWindowScene })
             .flatMap({ $0.windows })
@@ -110,7 +103,7 @@ let kkSAFE_AREA_TOP: CGFloat = {
     return 0
 }()
 /// bottom 安全区域
-let kkSAFE_AREA_BOTTOM: CGFloat = {
+public let kkSAFE_AREA_BOTTOM: CGFloat = {
     guard let window = UIApplication.shared.connectedScenes
             .compactMap({ $0 as? UIWindowScene })
             .flatMap({ $0.windows })
@@ -125,7 +118,7 @@ let kkSAFE_AREA_BOTTOM: CGFloat = {
 }()
 
 /// 状态栏高度
-let kkSTATUS_BAR_HEIGHT: CGFloat = {
+public let kkSTATUS_BAR_HEIGHT: CGFloat = {
     guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
         return 0
     }
@@ -137,24 +130,24 @@ let kkSTATUS_BAR_HEIGHT: CGFloat = {
 }()
 
 /// 导航栏总高度（状态栏+导航栏）
-let kkNAVIGATION_BAR_HEIGHT = kkNAV_HEIGHT + kkSTATUS_BAR_HEIGHT
+public let kkNAVIGATION_BAR_HEIGHT = kkNAV_HEIGHT + kkSTATUS_BAR_HEIGHT
 
 /// Tab栏总高度（Tab栏+底部安全区域）
-let kkTAB_BAR_TOTAL_HEIGHT = kkTABBAR_HEIGHT + kkSAFE_AREA_BOTTOM
+public let kkTAB_BAR_TOTAL_HEIGHT = kkTABBAR_HEIGHT + kkSAFE_AREA_BOTTOM
 
 /// 设备类型判断
-let kkIS_IPHONE = UIDevice.current.userInterfaceIdiom == .phone
-let kkIS_IPAD = UIDevice.current.userInterfaceIdiom == .pad
+public let kkIS_IPHONE = UIDevice.current.userInterfaceIdiom == .phone
+public let kkIS_IPAD = UIDevice.current.userInterfaceIdiom == .pad
 
 /// 屏幕类型判断 是否有刘海屏
-let kkIS_IPHONE_X_SERIES: Bool = {
+public let kkIS_IPHONE_X_SERIES: Bool = {
     guard kkIS_IPHONE else { return false }
     return kkSAFE_AREA_BOTTOM > 0
 }()
 
 // MARK: - 机型相关
-let kkScreen_max_length = max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
-let kkScreen_min_length = min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
+public let kkScreen_max_length = max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
+public let kkScreen_min_length = min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
 
 
 // MARK: - 颜色相关
@@ -226,9 +219,9 @@ public func kkColorFromHex(_ hex: String) -> UIColor {
 }
 
 // MARK: - 文件相关
-let kkPathTemp = NSTemporaryDirectory()
-let kkPathDocument = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
-let kkPathCache = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first
+public let kkPathTemp = NSTemporaryDirectory()
+public let kkPathDocument = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+public let kkPathCache = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first
 
 // MARK: - 通知中心
 private let kkNotificationCenter = NotificationCenter.default
@@ -251,21 +244,12 @@ public func kkStringIsEmpty(_ str: String?) -> Bool {
     return false
 }
 
-// MARK: - 常用标记
-//本地存储
-let GuidVersion = "GuidVersion"
-
-
-func Localize_Swift_bridge(forKey:String,table:String,fallbackValue:String)->String {
+public func Localize_Swift_bridge(forKey:String,table:String,fallbackValue:String)->String {
     return forKey.localized(using: table);
 }
 
-//头文件
-import UIKit
-@_exported import SnapKit
-
 //获取图片宽高比
-func imgRote(image: UIImage) -> Double {
+public func imgRote(image: UIImage) -> Double {
     return image.size.width / image.size.height
 }
 
@@ -275,7 +259,7 @@ func imgRote(image: UIImage) -> Double {
 ///   - file: 文件
 ///   - funcName: 方法名
 ///   - lineNum: 行数
-func MyLog<T>(_ message: T, file: String = #file, funcName: String = #function, lineNum: Int = #line) {
+public func MyLog<T>(_ message: T, file: String = #file, funcName: String = #function, lineNum: Int = #line) {
     let fileName = (file as NSString).lastPathComponent
     //获取当前时间
     let now = Date()

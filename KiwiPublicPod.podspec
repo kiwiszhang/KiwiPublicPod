@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KiwiPublicPod'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'A short description of KiwiPublicPod.'
 
 # This description is used to generate tags and improve search results.
@@ -32,15 +32,28 @@ TODO: Add long description of the pod here.
 
   # ✅ Swift 版本
   s.swift_versions   = '5'
-  s.source_files = 'KiwiPublicPod/Classes/**/*'
-  
-  s.resource_bundles = {
-    'KiwiPublicPod' => ['KiwiPublicPod/Assets/*']
-  }
-
+  # 源码文件，保留 Classes 下的目录结构
+  s.source_files = 'KiwiPublicPod/Classes/**/*.{swift,h,m}'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'SnapKit', '~> 5.7.0'
   s.dependency 'Localize-Swift', '~> 3.2.0'
+  s.dependency 'MBProgressHUD', '~> 1.2.0'
+  
+  s.subspec 'CustomView' do |ss|
+      ss.source_files = 'KiwiPublicPod/Classes/CustomView/**/*.{swift,h,m}'
+  end
+  s.subspec 'Extension' do |ss|
+      ss.source_files = 'KiwiPublicPod/Classes/Extension/**/*.{swift,h,m}'
+  end
+  s.subspec 'Utitls' do |ss|
+      ss.source_files = 'KiwiPublicPod/Classes/Utitls/**/*.{swift,h,m}'
+  end
+  
+  
+  # 资源文件，递归保留 Assets 下所有子目录
+  s.resource_bundles = {
+    'KiwiPublicPod' => ['KiwiPublicPod/Assets/**/*']
+  }
 end

@@ -15,7 +15,7 @@ public enum CustomButtonType: String {
     case Down = "Down"
 }
 
-public class CustomButton: UIButton {
+open class CustomButton: UIButton {
     var paddingSpace: CGFloat = 0
     var customBtnType: CustomButtonType = .Left {
         didSet {

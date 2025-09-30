@@ -18,7 +18,7 @@ open class NavigationBar: UINavigationBar {
         shadowImage = UIImage()
             
         titleTextAttributes = [
-                                NSAttributedString.Key.foregroundColor: UIColor.colorWithHexString("#333333"),
+                                NSAttributedString.Key.foregroundColor: kkColorFromHex("333333"),
                                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .bold)
                                 ]
     }

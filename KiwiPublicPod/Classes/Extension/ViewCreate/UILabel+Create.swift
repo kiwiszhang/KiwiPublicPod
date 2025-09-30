@@ -22,12 +22,6 @@ public extension UILabel {
     }
     
     @discardableResult
-    func isAdjustsFontSizeToFitWidth(_ isAdjusts: Bool) -> Self {
-        self.adjustsFontSizeToFitWidth = isAdjusts
-        return self
-    }
-    
-    @discardableResult
     func minimumScaleFactor(_ scale: Double) -> Self {
         self.adjustsFontSizeToFitWidth = true
         self.minimumScaleFactor = scale

@@ -28,7 +28,7 @@ func showAlertView(
     let confirmAction = UIAlertAction(title: confirmButtonTitle, style: .default) { _ in
         completion(true)
     }
-    confirmAction.setValue(UIColor.colorWithHexString(confirmButtonColor), forKey: "titleTextColor")
+    confirmAction.setValue(kkColorFromHex(confirmButtonColor), forKey: "titleTextColor")
     alert.addAction(confirmAction)
     
     if let topViewController = UIApplication.topViewController() {

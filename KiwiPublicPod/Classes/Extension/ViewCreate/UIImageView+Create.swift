@@ -13,7 +13,9 @@ public extension UIImageView {
         self.image = image
         return self
     }
-    
+//    UIImage 必须是 模板图片（renderingMode = .alwaysTemplate），tintColor 才会生效。
+//    模板图片就是忽略原来的颜色，只保留形状（Alpha 通道），然后用 tintColor 来着色。
+//    常见的系统图标（SF Symbols，或者 UIImage(systemName:)）默认就是模板图片
     @discardableResult
     func tintColor(_ color: UIColor) -> Self {
         tintColor = color

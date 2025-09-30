@@ -1,4 +1,4 @@
-use_frameworks!
+use_frameworks! :linkage => :dynamic
 
 platform :ios, '15.0'
 
@@ -7,8 +7,10 @@ target 'KiwiPublicPod_Example' do
 #  pod 'KiwiPublicPod', '~> 0.1.2'
 
   # 开发环境专用
-#  pod 'SwiftGen', '~> 6.6.3', :configurations => ['Debug']
+  pod 'SwiftGen', '~> 6.6.3', :configurations => ['Debug']
   
+#  pod 'MBProgressHUD', '~> 1.2.0'
+
   # 数据转模型
 #  pod 'HandyJSON', '5.0.0'
   

@@ -13,8 +13,23 @@ class HomeViewController: SuperViewController {
     
     private var itemList:[String] = ["基础控件使用"]
     // MARK: -  =======================lazy========================
+    private lazy var headerView = UILabel().text("tableHeader").centerAligned().backgroundColor(.systemCyan)
+    private lazy var footerView = UILabel().text("footerView").centerAligned().backgroundColor(.systemCyan)
     private lazy var tableView = {
-        return UITableView(frame: .zero, style: .grouped).delegate(self).dataSource(self).separatorStyle(.none).backgroundColor(.clear).registerCells(HomeItemCell.self).scrollEnable(true).headerHeight(0.01).footerHeight(0.01).clipsToBounds(true).registerHeaderFooters(SuperTableViewHeaderFooterView.self).rowHeight(62.h).showsH(false)
+        return UITableView(frame: .zero, style: .grouped)
+            .delegate(self).dataSource(self)
+            .separatorStyle(.none)
+            .backgroundColor(.clear)
+            .registerCells(HomeItemCell.self)
+            .registerHeaderFooters(SuperTableViewHeaderFooterView.self)
+            .scrollEnable(true)
+            .headerHeight(0.01)
+            .footerHeight(0.01)
+            .clipsToBounds(true)
+            .rowHeight(62.h)
+            .showsH(false)
+            .showsV(false)
+            .showsHV(false)
     }()
     
     // MARK: - =====================life cycle=======================
@@ -38,6 +53,11 @@ class HomeViewController: SuperViewController {
         tableView.snp.makeConstraints { make in
             make.left.right.bottom.top.equalToSuperview()
         }
+        
+        tableView.tableHeader(headerView)
+        headerView.frame = CGRect(x: 0, y: 0, width:kkScreenWidth, height: 100.h)
+        tableView.tableFooter(footerView)
+        footerView.frame = CGRect(x: 0, y: 0, width:kkScreenWidth, height: 100.h)
         itemList = ["基础控件使用"]
         tableView.reloadData()
     }

@@ -15,7 +15,7 @@ public extension UIPageControl {
     ///   - color: 颜色
     ///   - selectColor: 选中颜色
     /// - Returns: 页码控制器
-    class func creatPageControl(color: UIColor = .white, selectColor: UIColor = UIColor.theMeColor()) -> UIPageControl {
+    class func creatPageControl(color: UIColor = .white, selectColor: UIColor = .systemCyan) -> UIPageControl {
         let pageControl = UIPageControl()
         pageControl.pageIndicatorTintColor = color
         pageControl.currentPageIndicatorTintColor = selectColor
