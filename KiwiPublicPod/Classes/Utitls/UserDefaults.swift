@@ -7,16 +7,16 @@
 
 import Foundation
 
-private protocol AnyOptional {
+public protocol AnyOptional {
     var isNil: Bool { get }
 }
 
 extension Optional: AnyOptional {
-    var isNil: Bool { self == nil }
+    public var isNil: Bool { self == nil }
 }
 
 @propertyWrapper
-struct UserDefault<T> {
+public struct UserDefault<T> {
     let key: String
     let defaultValue: T
     let storage: UserDefaults
@@ -27,7 +27,7 @@ struct UserDefault<T> {
         self.storage = storage
     }
     
-    var wrappedValue: T {
+    public var wrappedValue: T {
         get {
             // 如果键不存在，返回默认值
             if !storage.contains(key) {
@@ -70,20 +70,20 @@ struct UserDefault<T> {
 }
 
 // 扩展 UserDefaults 添加 contains 方法
-extension UserDefaults {
+public extension UserDefaults {
     func contains(_ key: String) -> Bool {
         return object(forKey: key) != nil
     }
 }
 
-extension UserDefault where T: ExpressibleByNilLiteral {
+public extension UserDefault where T: ExpressibleByNilLiteral {
     init(_ key: String, storage: UserDefaults = .standard) {
         self.init(key, defaultValue: nil, storage: storage)
     }
 }
 
 // 定义可以存储在 UserDefaults 中的类型
-protocol PropertyListValue {}
+public protocol PropertyListValue {}
 
 extension Data: PropertyListValue {}
 extension String: PropertyListValue {}
@@ -96,7 +96,7 @@ extension Array: PropertyListValue where Element: PropertyListValue {}
 extension Dictionary: PropertyListValue where Key == String, Value: PropertyListValue {}
 
 // 支持 Codable 类型
-extension UserDefault where T: Codable {
+public extension UserDefault where T: Codable {
     init(_ key: String, defaultValue: T, storage: UserDefaults = .standard) {
         self.key = key
         self.defaultValue = defaultValue
