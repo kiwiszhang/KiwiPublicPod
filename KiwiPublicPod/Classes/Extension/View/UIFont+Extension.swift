@@ -63,13 +63,11 @@ public extension UIFont {
     
     static func archivoBlack(size: CGFloat, weight: ArchivoBlackWeight = .regular) -> UIFont {
         // 对应 SwiftGen fonts.yml 里生成的
-        let fontConvertible: FontConvertible
+        let systemWeight: UIFont.Weight
         switch weight {
-            case .regular:
-            fontConvertible = FontFamily.ArchivoBlack.regular
+            case .regular:    systemWeight = .regular
         }
-        let customFont = fontConvertible.font(size: size)
-        return customFont
+        return UIFont.systemFont(ofSize: size, weight: systemWeight)
     }
 
 }
