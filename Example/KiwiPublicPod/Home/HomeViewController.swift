@@ -8,6 +8,8 @@
 
 import UIKit
 import KiwiPublicPod
+import MBProgressHUD
+
 
 class HomeViewController: SuperViewController {
     
@@ -63,7 +65,7 @@ class HomeViewController: SuperViewController {
     }
     
     override func getData() {
-
+        MBProgressHUD.showMessage("ffff")
     }
     // MARK: - =====================actions==========================
 
