@@ -14,6 +14,13 @@ public extension UILabel {
         self.font = UIFont.inter(size: size, weight: weight)
         return self
     }
+    
+    @discardableResult
+    func abFont(size: CGFloat, weight: ArchivoBlackWeight = .regular) -> Self {
+        self.font = UIFont.archivoBlack(size: size, weight: weight)
+        return self
+    }
+
 
     @discardableResult
     func text(_ text: String?) -> Self {
