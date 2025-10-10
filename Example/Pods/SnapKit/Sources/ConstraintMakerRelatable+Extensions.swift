@@ -21,7 +21,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#if canImport(UIKit)
+#if os(iOS) || os(tvOS)
     import UIKit
 #else
     import AppKit
@@ -47,7 +47,7 @@ extension ConstraintMakerRelatable {
     }
   
     @discardableResult
-    public func greaterThanOrEqualToSuperview<T: ConstraintRelatableTarget>(_ closure: (ConstraintView) -> T, _ file: String = #file, line: UInt = #line) -> ConstraintMakerEditable {
+    public func greaterThanOrEqualTo<T: ConstraintRelatableTarget>(_ closure: (ConstraintView) -> T, _ file: String = #file, line: UInt = #line) -> ConstraintMakerEditable {
         guard let other = self.description.item.superview else {
             fatalError("Expected superview but found nil when attempting make constraint `greaterThanOrEqualToSuperview`.")
         }

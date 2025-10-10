@@ -2,7 +2,8 @@
 //  String+LocalizeTableName.swift
 //  Localize_Swift
 //
-//  Copyright © 2020 Vitalii Budnik. All rights reserved.
+//  Created by Vitalii Budnik on 3/10/16.
+//  Copyright © 2016 Vitalii Budnik. All rights reserved.
 //
 
 import Foundation

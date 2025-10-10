@@ -4,7 +4,7 @@ platform :ios, '15.0'
 
 target 'KiwiPublicPod_Example' do
   pod 'KiwiPublicPod', :path => '../'
-#  pod 'KiwiPublicPod', '~> 0.1.2'
+#  pod 'KiwiPublicPod'
 
   # 开发环境专用
   pod 'SwiftGen', '~> 6.6.3', :configurations => ['Debug']

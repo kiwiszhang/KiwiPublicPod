@@ -2,7 +2,8 @@
 //  String+LocalizeBundle.swift
 //  Localize_Swift
 //
-//  Copyright © 2020 Roy Marmelstein. All rights reserved.
+//  Created by Vitalii Budnik on 10/7/16.
+//  Copyright © 2016 Roy Marmelstein. All rights reserved.
 //
 
 import Foundation

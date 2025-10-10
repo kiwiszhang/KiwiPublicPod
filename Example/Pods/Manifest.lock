@@ -1,31 +1,11 @@
 PODS:
-  - KiwiPublicPod (0.1.4):
-    - KiwiPublicPod/CustomView (= 0.1.4)
-    - KiwiPublicPod/Extension (= 0.1.4)
-    - KiwiPublicPod/Utitls (= 0.1.4)
-    - Localize-Swift (~> 3.2.0)
+  - KiwiPublicPod (0.1.7):
+    - Localize-Swift (~> 3.1.0)
     - MBProgressHUD (~> 1.2.0)
-    - SnapKit (~> 5.7.0)
-  - KiwiPublicPod/CustomView (0.1.4):
-    - Localize-Swift (~> 3.2.0)
-    - MBProgressHUD (~> 1.2.0)
-    - SnapKit (~> 5.7.0)
-  - KiwiPublicPod/Extension (0.1.4):
-    - Localize-Swift (~> 3.2.0)
-    - MBProgressHUD (~> 1.2.0)
-    - SnapKit (~> 5.7.0)
-  - KiwiPublicPod/Utitls (0.1.4):
-    - Localize-Swift (~> 3.2.0)
-    - MBProgressHUD (~> 1.2.0)
-    - SnapKit (~> 5.7.0)
-  - Localize-Swift (3.2.0):
-    - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
-    - Localize-Swift/UIKit (= 3.2.0)
-  - Localize-Swift/LocalizeSwiftCore (3.2.0)
-  - Localize-Swift/UIKit (3.2.0):
-    - Localize-Swift/LocalizeSwiftCore
+    - SnapKit (~> 5.6.0)
+  - Localize-Swift (3.1.0)
   - MBProgressHUD (1.2.0)
-  - SnapKit (5.7.1)
+  - SnapKit (5.6.0)
   - SwiftGen (6.6.3)
 
 DEPENDENCIES:
@@ -44,12 +24,12 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KiwiPublicPod: f10264b83fedb89b5efadfc5ea4528c3180cd889
-  Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
+  KiwiPublicPod: 33ec4fb56755766d6015c57264d114547c8f0290
+  Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftGen: 4993cbf71cbc4886f775e26f8d5c3a1188ec9f99
 
-PODFILE CHECKSUM: 364eb050f866059bdfc4d39ab6ab57067fc479ae
+PODFILE CHECKSUM: 95b1f3dbb29ad2cd12f3f6d36462f872f9f64ad8
 
 COCOAPODS: 1.16.2
