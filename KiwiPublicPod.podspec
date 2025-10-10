@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KiwiPublicPod'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'A short description of KiwiPublicPod.'
 
 # This description is used to generate tags and improve search results.
@@ -47,6 +47,6 @@ TODO: Add long description of the pod here.
     'KiwiPublicPod' => ['KiwiPublicPod/Assets/**/*']
   }
   
-  s.preserve_paths = 'KiwiPublicPod/Classes/**/*', 'KiwiPublicPod/Assets/**/*'
+  s.default_subspec  = 'CustomView', 'Extension', 'Utitls'
 
 end
