@@ -20,6 +20,11 @@ public enum InterWeight {
     case light, regular, medium, bold
 }
 
+public enum ArchivoBlackWeight {
+    case  regular
+}
+
+
 
 public extension UIFont {
     static func inter(size: CGFloat, weight: InterWeight = .regular) -> UIFont {
@@ -41,7 +46,7 @@ public extension UIFont {
 //        case .bold:
 //            fontConvertible = FontFamily.Inter.bold
 //        }
-//        
+//
 //        let customFont = fontConvertible.font(size: size)
 //        return customFont
         
@@ -55,4 +60,16 @@ public extension UIFont {
         return UIFont.systemFont(ofSize: size, weight: systemWeight)
 
     }
+    
+    static func archivoBlack(size: CGFloat, weight: ArchivoBlackWeight = .regular) -> UIFont {
+        // 对应 SwiftGen fonts.yml 里生成的
+        let fontConvertible: FontConvertible
+        switch weight {
+            case .regular:
+            fontConvertible = FontFamily.ArchivoBlack.regular
+        }
+        let customFont = fontConvertible.font(size: size)
+        return customFont
+    }
+
 }
