@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   # ✅ Swift 版本
   s.swift_versions   = '5'
   # 源码文件，保留 Classes 下的目录结构
-  s.source_files = 'KiwiPublicPod/Classes/**/*'
+#  s.source_files = 'KiwiPublicPod/Classes/**/*'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
@@ -48,5 +48,19 @@ TODO: Add long description of the pod here.
   }
   
   s.default_subspec  = 'CustomView', 'Extension', 'Utitls'
+  # 🧩 Extension 模块
+  s.subspec 'Extension' do |ss|
+    ss.source_files = 'KiwiPublicPod/Classes/Extension/**/*.{swift}'
+  end
+
+  # 🧩 CustomView 模块
+  s.subspec 'CustomView' do |ss|
+    ss.source_files = 'KiwiPublicPod/Classes/CustomView/**/*.{swift}'
+  end
+
+  # 🧩 Utitls 模块
+  s.subspec 'Utitls' do |ss|
+    ss.source_files = 'KiwiPublicPod/Classes/Utitls/**/*.{swift}'
+  end
 
 end
