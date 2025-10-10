@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KiwiPublicPod'
-  s.version          = '0.1.11'
+  s.version          = '0.1.12'
   s.summary          = 'A short description of KiwiPublicPod.'
 
 # This description is used to generate tags and improve search results.
@@ -36,9 +36,9 @@ TODO: Add long description of the pod here.
   s.source_files = 'KiwiPublicPod/Classes/**/*.{swift,h,m}'
 
 #  s.public_header_files = 'KiwiPublicPod/Classes/**/*.swift'
-  s.dependency 'SnapKit', '~> 5.6.0'
-  s.dependency 'Localize-Swift', '~> 3.1.0'
-  s.dependency 'MBProgressHUD', '~> 1.2.0'
+  s.dependency 'SnapKit', '~> 5.7.0'
+  s.dependency 'Localize-Swift', '~> 3.2.0'
+#  s.dependency 'MBProgressHUD', '~> 1.2.0'
   
   
   # 资源文件，递归保留 Assets 下所有子目录
