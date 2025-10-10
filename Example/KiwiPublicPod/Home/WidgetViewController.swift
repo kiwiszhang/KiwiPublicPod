@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 import KiwiPublicPod
 
 class WidgetViewController: SuperViewController {
@@ -57,7 +58,6 @@ class WidgetViewController: SuperViewController {
             make.top.equalTo(testField.snp.bottom).offset(10)
             make.height.equalTo(50)
         }
-        
         testimageView.snp.makeConstraints { make in
             make.height.width.equalTo(56.h)
             make.left.equalToSuperview().offset(50)

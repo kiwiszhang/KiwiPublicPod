@@ -33,38 +33,20 @@ TODO: Add long description of the pod here.
   # ✅ Swift 版本
   s.swift_versions   = '5'
   # 源码文件，保留 Classes 下的目录结构
-#  s.source_files = 'KiwiPublicPod/Classes/**/*'
-  s.default_subspec  = 'CustomView', 'Extension', 'Utitls'
-  # 🧩 Utitls 模块
-  s.subspec 'Utitls' do |ss|
-    ss.source_files = 'KiwiPublicPod/Classes/Utitls/**/*.{swift}'
-  end
-  
-  # 🧩 Extension 模块
-  s.subspec 'Extension' do |ss|
-    ss.source_files = 'KiwiPublicPod/Classes/Extension/**/*.{swift}'
-    ss.dependency 'KiwiPublicPod/Utitls'
-    ss.dependency 'SnapKit', '~> 5.6.0'
-    ss.dependency 'Localize-Swift', '~> 3.1.0'
-    ss.dependency 'MBProgressHUD', '~> 1.2.0'
-  end
+  s.source_files = 'KiwiPublicPod/Classes/**/*'
 
-  # 🧩 CustomView 模块
-  s.subspec 'CustomView' do |ss|
-    ss.source_files = 'KiwiPublicPod/Classes/CustomView/**/*.{swift}'
-    ss.dependency 'KiwiPublicPod/Utitls' 
-    ss.dependency 'SnapKit', '~> 5.6.0'
-    ss.dependency 'Localize-Swift', '~> 3.1.0'
-    ss.dependency 'MBProgressHUD', '~> 1.2.0'
-  end
-
-  
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
+  s.dependency 'SnapKit', '~> 5.6.0'
+  s.dependency 'Localize-Swift', '~> 3.1.0'
+  s.dependency 'MBProgressHUD', '~> 1.2.0'
+  
   
   # 资源文件，递归保留 Assets 下所有子目录
   s.resource_bundles = {
     'KiwiPublicPod' => ['KiwiPublicPod/Assets/**/*']
   }
   
+  s.default_subspec  = 'CustomView', 'Extension', 'Utitls'
+
 end
