@@ -1,5 +1,5 @@
 PODS:
-  - KiwiPublicPod (0.1.16):
+  - KiwiPublicPod (0.1.22):
     - Localize-Swift (~> 3.1.0)
     - SnapKit (~> 5.6.0)
   - Localize-Swift (3.1.0)
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KiwiPublicPod: c55f4e245f516f1b0423dce6e1cae83aef109751
+  KiwiPublicPod: 67ea1fe95ae329f123d035686315b280572b4d21
   Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftGen: 4993cbf71cbc4886f775e26f8d5c3a1188ec9f99

@@ -9,13 +9,13 @@
 import UIKit
 
 //MARK: ----------扩展-----------
-extension Date {
+public extension Date {
     /// 日期转字符
     /// - Parameters:
     ///   - date: 日期
     ///   - format: 格式
     /// - Returns: 字符
-    static public func dateToStr(date: Date, format: String) -> String {
+    static func dateToStr(date: Date, format: String) -> String {
         let dateFormat = DateFormatter()
         dateFormat.dateFormat = format
         return dateFormat.string(from: date)
@@ -27,7 +27,7 @@ extension Date {
     ///   - dateStr: 日期字符串
     ///   - format: 格式
     /// - Returns: 日期
-    static public func strToDate(dateStr: String, format: String) -> Date {
+    static func strToDate(dateStr: String, format: String) -> Date {
         let dateFormat = DateFormatter()
         dateFormat.dateFormat = format
         if let date = dateFormat.date(from: dateStr) {

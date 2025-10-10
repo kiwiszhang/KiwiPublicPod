@@ -10,7 +10,7 @@ import Foundation
 
 private let historyFilePath = "historyFilePath".doc()
 
-extension Array {
+public extension Array {
     /// 读写历史数据
     static var historyArray: Array<String> {
         get {
@@ -35,7 +35,7 @@ extension Array {
     }
 }
 
-extension Sequence {
+public extension Sequence {
     func asyncMap<T>(_ transform: (Element) async -> T) async -> [T] {
         var values = [T]()
         for element in self {

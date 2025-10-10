@@ -8,9 +8,9 @@
 
 import Foundation
 
-extension Dictionary {
+public extension Dictionary {
     /// 词典解密
-    public var base64Dic: [String: Any] {
+    var base64Dic: [String: Any] {
         var resultDic = [String: Any]()
         for (key, value) in self {
             if value is NSNull { resultDic[key as! String] = "" }
@@ -52,7 +52,7 @@ extension Dictionary {
          // PhotoRequest(imageName: Optional("Housing"), name: "Housing", index: Optional(1))
      }
      **/
-    public func decode<T: Decodable>(to type: T.Type) -> T? {
+    func decode<T: Decodable>(to type: T.Type) -> T? {
         do {
             let data = try JSONSerialization.data(withJSONObject: self, options: [])
             let decoder = JSONDecoder()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension CGFloat {
+public extension CGFloat {
     //屏幕宽高
     public var w: CGFloat {
         let standardWidth: CGFloat = 375

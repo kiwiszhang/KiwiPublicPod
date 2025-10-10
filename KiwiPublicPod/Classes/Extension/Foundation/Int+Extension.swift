@@ -22,7 +22,7 @@ extension Int {
     }
 }
 
-extension Int64 {
+public extension Int64 {
     /// 将秒级时间戳转成指定格式的日期字符串
     func toDateString(format: String = "MMM dd, yyyy",
                       timeZone: TimeZone = .current,
