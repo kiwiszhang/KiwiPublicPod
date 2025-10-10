@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KiwiPublicPod'
-  s.version          = '0.1.5'
+  s.version          = '0.1.7'
   s.summary          = 'A short description of KiwiPublicPod.'
 
 # This description is used to generate tags and improve search results.
@@ -46,4 +46,7 @@ TODO: Add long description of the pod here.
   s.resource_bundles = {
     'KiwiPublicPod' => ['KiwiPublicPod/Assets/**/*']
   }
+  
+  s.preserve_paths = 'KiwiPublicPod/Classes/**/*', 'KiwiPublicPod/Assets/**/*'
+
 end
