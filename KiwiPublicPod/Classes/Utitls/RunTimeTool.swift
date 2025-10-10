@@ -7,11 +7,11 @@
 //
 import UIKit
 
-protocol RunTimeProtocol: class {
+public protocol RunTimeProtocol: class {
     static func appAwake()
 }
 
-class RunTimeTool {
+public class RunTimeTool {
     static func getAllRunClass() {
         let typeCount = Int(objc_getClassList(nil, 0))
         let types = UnsafeMutablePointer<AnyClass>.allocate(capacity: typeCount)

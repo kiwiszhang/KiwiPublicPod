@@ -21,7 +21,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#if canImport(UIKit)
+#if os(iOS) || os(tvOS)
     import UIKit
 #else
     import AppKit
@@ -152,7 +152,7 @@ internal struct ConstraintAttributes : OptionSet, ExpressibleByIntegerLiteral {
             attrs.append(.lastBaseline)
         }
         
-        #if canImport(UIKit)
+        #if os(iOS) || os(tvOS)
             if (self.contains(ConstraintAttributes.firstBaseline)) {
                 attrs.append(.firstBaseline)
             }

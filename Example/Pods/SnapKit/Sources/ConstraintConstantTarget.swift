@@ -21,7 +21,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#if canImport(UIKit)
+#if os(iOS) || os(tvOS)
     import UIKit
 #else
     import AppKit
@@ -40,7 +40,7 @@ extension CGSize: ConstraintConstantTarget {
 extension ConstraintInsets: ConstraintConstantTarget {
 }
 
-#if canImport(UIKit)
+#if os(iOS) || os(tvOS)
 @available(iOS 11.0, tvOS 11.0, *)
 extension ConstraintDirectionalInsets: ConstraintConstantTarget {
 }
@@ -80,7 +80,7 @@ extension ConstraintConstantTarget {
         }
         
         if let value = self as? CGPoint {
-            #if canImport(UIKit)
+            #if os(iOS) || os(tvOS)
                 switch layoutAttribute {
                 case .left, .right, .leading, .trailing, .centerX, .leftMargin, .rightMargin, .leadingMargin, .trailingMargin, .centerXWithinMargins:
                     return value.x
@@ -110,7 +110,7 @@ extension ConstraintConstantTarget {
         }
         
         if let value = self as? ConstraintInsets {
-            #if canImport(UIKit)
+            #if os(iOS) || os(tvOS)
                 switch layoutAttribute {
                 case .left, .leftMargin:
                     return value.left
@@ -171,7 +171,7 @@ extension ConstraintConstantTarget {
             #endif
         }
         
-        #if canImport(UIKit)
+        #if os(iOS) || os(tvOS)
             if #available(iOS 11.0, tvOS 11.0, *), let value = self as? ConstraintDirectionalInsets {
                 switch layoutAttribute {
                 case .left, .leftMargin:

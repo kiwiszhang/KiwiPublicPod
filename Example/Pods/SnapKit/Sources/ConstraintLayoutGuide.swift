@@ -21,14 +21,14 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#if canImport(UIKit)
+#if os(iOS) || os(tvOS)
     import UIKit
 #else
     import AppKit
 #endif
 
 
-#if canImport(UIKit)
+#if os(iOS) || os(tvOS)
     @available(iOS 9.0, *)
     public typealias ConstraintLayoutGuide = UILayoutGuide
 #else
