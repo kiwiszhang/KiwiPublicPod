@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   # ✅ Swift 版本
   s.swift_versions   = '5'
   # 源码文件，保留 Classes 下的目录结构
-  s.source_files = 'KiwiPublicPod/Classes/**/*.{swift,h,m}'
+  s.source_files = 'KiwiPublicPod/Classes/*.{swift,h,m}'
 
 #  s.public_header_files = 'KiwiPublicPod/Classes/**/*.swift'
   s.dependency 'SnapKit', '~> 5.7.0'
