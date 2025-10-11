@@ -15,7 +15,7 @@ open class VideoPlayerView: UIView {
     private var fileURL: URL?
     
     // MARK: - 初始化
-    init(fileURL: URL? = nil) {
+    public init(fileURL: URL? = nil) {
         self.fileURL = fileURL
         super.init(frame: .zero)
         setupPlayer(with: fileURL)

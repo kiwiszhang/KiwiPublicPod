@@ -6,9 +6,9 @@
 //
 
 public struct GuidBannerItem {
-    let date: String
-    let title: String
-    let comment: String
+    public var date: String
+    public var title: String
+    public var comment: String
 }
 
 /**
