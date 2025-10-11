@@ -10,22 +10,21 @@ import UIKit
 import Localize_Swift
 
 open class SuperView: UIView {
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateLanguageUI), name: NSNotification.Name(LCLLanguageChangeNotification), object: nil)
-        setUpUI()
-        getData()
+        commonInit()
     }
+
     required public init?(coder: NSCoder) {
         super.init(coder: coder)
+        commonInit()
     }
-    
-    public convenience init() {
-        self.init(frame: .zero)
-    }
-    
-    open override func awakeFromNib() {
-        super.awakeFromNib()
+
+    private func commonInit() {
+        NotificationCenter.default.addObserver(self,
+            selector: #selector(updateLanguageUI),
+            name: NSNotification.Name(LCLLanguageChangeNotification),
+            object: nil)
         setUpUI()
         getData()
     }
