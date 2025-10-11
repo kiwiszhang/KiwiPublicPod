@@ -5,7 +5,7 @@
 //  Created by 笔尚文化 on 2025/9/17.
 //
 
-struct GuidBannerItem {
+public struct GuidBannerItem {
     let date: String
     let title: String
     let comment: String
