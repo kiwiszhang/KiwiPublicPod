@@ -8,9 +8,9 @@
 import UIKit
 import SwiftUICore
 
-typealias AlertActionBlock = (Bool) -> Void
+open typealias AlertActionBlock = (Bool) -> Void
 
-func showAlertView(
+open func showAlertView(
     title: String,
     message: String,
     confirmButtonTitle: String = "Confirm",
@@ -36,7 +36,7 @@ func showAlertView(
     }
 }
 
-func showAlertViewWithOutCancelButton(
+open func showAlertViewWithOutCancelButton(
     title: String,
     message: String,
     confirmButtonTitle: String = "Confirm",
