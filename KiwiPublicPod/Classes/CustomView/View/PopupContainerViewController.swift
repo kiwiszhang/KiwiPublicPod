@@ -14,7 +14,7 @@ open class PopupContainerViewController: SuperViewController {
     private var bottomConstraint: Constraint?   // SnapKit 的约束引用
 //    private var panGesture: UIPanGestureRecognizer!
 
-    init(contentVC: UIViewController, height: CGFloat = 300) {
+    open init(contentVC: UIViewController, height: CGFloat = 300) {
         self.contentVC = contentVC
         self.contentHeight = height
         super.init(nibName: nil, bundle: nil)
