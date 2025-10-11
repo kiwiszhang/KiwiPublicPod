@@ -242,11 +242,51 @@ extension GuidBannerView: UICollectionViewDataSource, UICollectionViewDelegate {
 
 // MARK: - Cell
 public class GuidBannerViewCell: SuperCollectionViewCell {
-    override public func setUpUI() {
-        
+    private lazy var imageView = UIImageView().image(Asset.guidStar.image)
+    private lazy var containerView = UIView().backgroundColor(kkColorFromHex("ECF2F1")).cornerRadius(16.h)
+    private lazy var dateLab = UILabel().text("June 26,2025").hnFont(size: 12.h, weight: .regular).color(kkColorFromHex("A4A9B1")).rightAligned()
+    private lazy var titleLab = UILabel().text(L10n.helpfulForTaxs).hnFont(size: 16.h, weight: .medium).color(kkColorFromHex("202124"))
+    private lazy var subTitle = UILabel().text(L10n.exportingReportsFor).hnFont(size: 14.h, weight: .regular).color(kkColorFromHex("5B5F65")).lines(0)
+    override func setUpUI() {
+        contentView.addSubView(containerView)
+        contentView.addSubview(imageView)
+        contentView.clipsToBounds = false
+        containerView.clipsToBounds = false
+        containerView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(12.h)
+            make.bottom.equalToSuperview()
+            make.left.equalToSuperview().offset(0.w)
+            make.right.equalToSuperview().offset(-0.w)
+        }
+        imageView.snp.makeConstraints { make in
+            make.height.equalTo(24.h)
+            make.width.equalTo(136.w)
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview()
+        }
+        containerView.addChildView([dateLab,titleLab,subTitle])
+        dateLab.snp.makeConstraints { make in
+            make.width.equalTo(88.w)
+            make.height.equalTo(20.h)
+            make.top.equalToSuperview().offset(20.h)
+            make.right.equalToSuperview().offset(-10.w)
+        }
+        titleLab.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(11.w)
+            make.height.equalTo(20.h)
+            make.right.equalTo(dateLab.snp.left)
+            make.top.equalToSuperview().offset(20.h)
+        }
+        subTitle.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(10.w)
+            make.right.equalToSuperview().offset(-10.w)
+            make.top.equalTo(titleLab.snp.bottom).offset(8.h)
+        }
     }
     
-    public func configure(with comtent: GuidBannerItem) {
-        
+    func configure(with comtent: GuidBannerItem) {
+        titleLab.text(comtent.title)
+        subTitle.text(comtent.comment)
+        dateLab.text(comtent.date)
     }
 }
