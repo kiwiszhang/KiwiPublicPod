@@ -9,6 +9,12 @@ public struct GuidBannerItem {
     public var date: String
     public var title: String
     public var comment: String
+    // 公开初始化器
+    public init(date: String, title: String, comment: String) {
+        self.date = date
+        self.title = title
+        self.comment = comment
+    }
 }
 
 /**
@@ -124,7 +130,7 @@ open class GuidBannerView: UIView {
         return 0
     }
 
-    init(frame: CGRect, items: [GuidBannerItem], autoScrollInterval: TimeInterval = 3.0) {
+    public init(frame: CGRect, items: [GuidBannerItem], autoScrollInterval: TimeInterval = 3.0) {
         self.items = items
         self.autoScrollInterval = autoScrollInterval
         super.init(frame: frame)
