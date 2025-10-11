@@ -98,7 +98,7 @@ open class GuidBannerView: UIView {
     private var timer: Timer?
     private var autoScrollInterval: TimeInterval = 3.0 // 默认 3 秒
     /// 点击回调
-    var didSelectItem: ((Int, GuidBannerItem) -> Void)?
+    public var didSelectItem: ((Int, GuidBannerItem) -> Void)?
 
     private lazy var collectionView: UICollectionView = {
         let layout = CenterSnapFlowLayout()
@@ -163,7 +163,7 @@ open class GuidBannerView: UIView {
 
 
     // MARK: - 自动滚动
-    func startAutoScroll() {
+    public func startAutoScroll() {
         stopAutoScroll()
         guard autoScrollInterval > 0 else { return }
         timer = Timer.scheduledTimer(withTimeInterval: autoScrollInterval, repeats: true) { [weak self] _ in
@@ -171,12 +171,12 @@ open class GuidBannerView: UIView {
         }
     }
 
-    func stopAutoScroll() {
+    public func stopAutoScroll() {
         timer?.invalidate()
         timer = nil
     }
 
-    private func scrollToNext() {
+    public private func scrollToNext() {
         let next = IndexPath(item: currentIndex + items.count + 1, section: 0)
         collectionView.scrollToItem(at: next, at: .centeredHorizontally, animated: true)
     }
@@ -241,12 +241,12 @@ extension GuidBannerView: UICollectionViewDataSource, UICollectionViewDelegate {
 }
 
 // MARK: - Cell
-class GuidBannerViewCell: SuperCollectionViewCell {
-    override func setUpUI() {
+public class GuidBannerViewCell: SuperCollectionViewCell {
+    override public func setUpUI() {
         
     }
     
-    func configure(with comtent: GuidBannerItem) {
+    public func configure(with comtent: GuidBannerItem) {
         
     }
 }
