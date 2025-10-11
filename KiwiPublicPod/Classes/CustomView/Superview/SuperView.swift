@@ -10,21 +10,26 @@ import UIKit
 import Localize_Swift
 
 open class SuperView: UIView {
+    // ✅ 指定初始化方法
     public override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
 
+    // ✅ 从 Storyboard / XIB 初始化
     required public init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
     }
 
+    // ✅ 抽取公共初始化逻辑
     private func commonInit() {
-        NotificationCenter.default.addObserver(self,
+        NotificationCenter.default.addObserver(
+            self,
             selector: #selector(updateLanguageUI),
             name: NSNotification.Name(LCLLanguageChangeNotification),
-            object: nil)
+            object: nil
+        )
         setUpUI()
         getData()
     }
