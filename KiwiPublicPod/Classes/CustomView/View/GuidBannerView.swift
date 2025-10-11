@@ -176,7 +176,7 @@ open class GuidBannerView: UIView {
         timer = nil
     }
 
-    public private func scrollToNext() {
+    public func scrollToNext() {
         let next = IndexPath(item: currentIndex + items.count + 1, section: 0)
         collectionView.scrollToItem(at: next, at: .centeredHorizontally, animated: true)
     }
