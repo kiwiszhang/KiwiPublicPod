@@ -19,6 +19,11 @@ open class SuperView: UIView {
     required public init?(coder: NSCoder) {
         super.init(coder: coder)
     }
+    
+    public convenience init() {
+        self.init(frame: .zero)
+    }
+    
     open override func awakeFromNib() {
         super.awakeFromNib()
         setUpUI()
