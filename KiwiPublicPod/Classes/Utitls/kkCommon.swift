@@ -8,7 +8,6 @@
 
 import UIKit
 @_exported import SnapKit
-import Localize_Swift;
 // MARK: - 系统相关
 /// 获取keyWindow
 public func kkKeyWindow() -> UIWindow? {
@@ -58,9 +57,6 @@ public let kkiOSVersionLater = { kkSystemVersion >= $0 }
 public let kkDeviceName = UIDevice.current.name
 /// 获取项目名
 public let kkProjectName = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
-public let AppID = "6752841772"
-/// 获取Store商店地址
-public let kkAPPStoreAddress = "itms-apps://itunes.apple.com/us/app/id\(AppID)?mt=8"
 /// 设备ID
 private var UUID: String {
     get {
@@ -244,9 +240,6 @@ public func kkStringIsEmpty(_ str: String?) -> Bool {
     return false
 }
 
-public func Localize_Swift_bridge(forKey:String,table:String,fallbackValue:String)->String {
-    return forKey.localized(using: table);
-}
 
 //获取图片宽高比
 public func imgRote(image: UIImage) -> Double {

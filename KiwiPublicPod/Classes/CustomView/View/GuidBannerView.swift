@@ -6,11 +6,13 @@
 //
 
 public struct GuidBannerItem {
+    public var topImage: UIImage
     public var date: String
     public var title: String
     public var comment: String
     // 公开初始化器
-    public init(date: String, title: String, comment: String) {
+    public init(topImage:UIImage, date: String, title: String, comment: String) {
+        self.topImage = topImage
         self.date = date
         self.title = title
         self.comment = comment
@@ -242,12 +244,12 @@ extension GuidBannerView: UICollectionViewDataSource, UICollectionViewDelegate {
 
 // MARK: - Cell
 public class GuidBannerViewCell: SuperCollectionViewCell {
-    private lazy var imageView = UIImageView().image(Asset.guidStar.image)
+    private lazy var imageView = UIImageView()
     private lazy var containerView = UIView().backgroundColor(kkColorFromHex("ECF2F1")).cornerRadius(16.h)
     private lazy var dateLab = UILabel().text("June 26,2025").hnFont(size: 12.h, weight: .regular).color(kkColorFromHex("A4A9B1")).rightAligned()
-    private lazy var titleLab = UILabel().text(L10n.helpfulForTaxs).hnFont(size: 16.h, weight: .medium).color(kkColorFromHex("202124"))
-    private lazy var subTitle = UILabel().text(L10n.exportingReportsFor).hnFont(size: 14.h, weight: .regular).color(kkColorFromHex("5B5F65")).lines(0)
-    override func setUpUI() {
+    private lazy var titleLab = UILabel().text("").hnFont(size: 16.h, weight: .medium).color(kkColorFromHex("202124"))
+    private lazy var subTitle = UILabel().text("").hnFont(size: 14.h, weight: .regular).color(kkColorFromHex("5B5F65")).lines(0)
+    public override func setUpUI() {
         contentView.addSubView(containerView)
         contentView.addSubview(imageView)
         contentView.clipsToBounds = false
@@ -288,5 +290,6 @@ public class GuidBannerViewCell: SuperCollectionViewCell {
         titleLab.text(comtent.title)
         subTitle.text(comtent.comment)
         dateLab.text(comtent.date)
+        imageView.image(comtent.topImage)
     }
 }
