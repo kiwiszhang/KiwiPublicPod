@@ -8,11 +8,11 @@
 import UIKit
 import SnapKit
 
-protocol PageControlViewDelegate: AnyObject {
+public protocol PageControlViewDelegate: AnyObject {
     func pageControl(_ control: PageControlView, didSelectPageAt index: Int)
 }
 
-struct PageControlViewConfig {
+public struct PageControlViewConfig {
     let pageCount: Int
     var currentPage: Int
     let dotColor: UIColor
@@ -20,7 +20,7 @@ struct PageControlViewConfig {
     let spacing: CGFloat
     let animateDuration: Double
     
-    static let `default` = PageControlViewConfig(
+    public static let `default` = PageControlViewConfig(
         pageCount: 5,
         currentPage: 0,
         dotColor: .lightGray,
@@ -53,7 +53,7 @@ open class PageControlView: SuperView {
     private var dots = [UIView]()
     
     // MARK: - 初始化方法
-    convenience init(config: PageControlViewConfig = PageControlViewConfig.default) {
+    public convenience init(config: PageControlViewConfig = PageControlViewConfig.default) {
         self.init(frame: CGRect.zero)
         self.config = config
         setUpUI()
