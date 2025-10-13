@@ -23,7 +23,7 @@ public extension UITextField {
     }
      
     @discardableResult
-    func hnFont(size: CGFloat, weight: InterWeightBase = .regular) -> Self {
+    func hnFont(size: CGFloat, weight: InterWeightBase = .regularBase) -> Self {
         self.font = UIFont.interBase(size: size, weight: weight)
         return self
     }

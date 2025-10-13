@@ -17,17 +17,17 @@ import Foundation
 //}
 
 public enum InterWeightBase {
-    case light, regular, medium, bold
+    case lightBase, regularBase, mediumBase, boldBase
 }
 
 public enum ArchivoBlackWeightBase {
-    case  regular
+    case  regularBase
 }
 
 
 
 public extension UIFont {
-    static func interBase(size: CGFloat, weight: InterWeightBase = .regular) -> UIFont {
+    static func interBase(size: CGFloat, weight: InterWeightBase = .regularBase) -> UIFont {
         
 //        let fontName = "HelveticaNeue" + (weight.rawValue.isEmpty ? "" : "-\(weight.rawValue)")
 //        if let font = UIFont(name: fontName, size: size) {
@@ -52,20 +52,20 @@ public extension UIFont {
         
         let systemWeight: UIFont.Weight
         switch weight {
-        case .light:      systemWeight = .light
-        case .regular:    systemWeight = .regular
-        case .medium:     systemWeight = .medium
-        case .bold:       systemWeight = .bold
+        case .lightBase:      systemWeight = .light
+        case .regularBase:    systemWeight = .regular
+        case .mediumBase:     systemWeight = .medium
+        case .boldBase:       systemWeight = .bold
         }
         return UIFont.systemFont(ofSize: size, weight: systemWeight)
 
     }
     
-    static func archivoBlackBase(size: CGFloat, weight: ArchivoBlackWeightBase = .regular) -> UIFont {
+    static func archivoBlackBase(size: CGFloat, weight: ArchivoBlackWeightBase = .regularBase) -> UIFont {
         // 对应 SwiftGen fonts.yml 里生成的
         let systemWeight: UIFont.Weight
         switch weight {
-            case .regular:    systemWeight = .regular
+            case .regularBase:    systemWeight = .regular
         }
         return UIFont.systemFont(ofSize: size, weight: systemWeight)
     }

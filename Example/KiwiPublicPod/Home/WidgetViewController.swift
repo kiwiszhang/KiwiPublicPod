@@ -16,7 +16,7 @@ class WidgetViewController: SuperViewController {
         print("testView")
     }
     private lazy var leftView = UIImageView().image(UIImage(named: "setting"))
-    private lazy var testField = UITextField().text("").holder("holder").hnFont(size: 22, weight: .regular).centerAligned().color(.systemCyan).borderStyle(.bezel).keyboardType(.decimalPad).returnType(.done).leftView(leftView)
+    private lazy var testField = UITextField().text("").holder("holder").hnFont(size: 22, weight: .regularBase).centerAligned().color(.systemCyan).borderStyle(.bezel).keyboardType(.decimalPad).returnType(.done).leftView(leftView)
     private lazy var testLabel = UILabel().text("UILabel").color(.systemRed).backgroundColor(.white).minimumScaleFactor(0.5).lines(3).lineBreakMode(.byCharWrapping).adjustsFontSizeToFitWidth(true).centerAligned()
     private lazy var testimageView = UIImageView().image(UIImage(named: "Summary")?.withRenderingMode(.alwaysTemplate)).tintColor(.red)
     // MARK: - =====================life cycle=======================

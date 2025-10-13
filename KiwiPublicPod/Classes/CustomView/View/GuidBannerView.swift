@@ -246,9 +246,9 @@ extension GuidBannerView: UICollectionViewDataSource, UICollectionViewDelegate {
 public class GuidBannerViewCell: SuperCollectionViewCell {
     private lazy var imageView = UIImageView()
     private lazy var containerView = UIView().backgroundColor(kkColorFromHex("ECF2F1")).cornerRadius(16.h)
-    private lazy var dateLab = UILabel().text("June 26,2025").hnFont(size: 12.h, weight: .regular).color(kkColorFromHex("A4A9B1")).rightAligned()
-    private lazy var titleLab = UILabel().text("").hnFont(size: 16.h, weight: .medium).color(kkColorFromHex("202124"))
-    private lazy var subTitle = UILabel().text("").hnFont(size: 14.h, weight: .regular).color(kkColorFromHex("5B5F65")).lines(0)
+    private lazy var dateLab = UILabel().text("June 26,2025").hnFont(size: 12.h, weight: .regularBase).color(kkColorFromHex("A4A9B1")).rightAligned()
+    private lazy var titleLab = UILabel().text("").hnFont(size: 16.h, weight: .mediumBase).color(kkColorFromHex("202124"))
+    private lazy var subTitle = UILabel().text("").hnFont(size: 14.h, weight: .regularBase).color(kkColorFromHex("5B5F65")).lines(0)
     public override func setUpUI() {
         contentView.addSubView(containerView)
         contentView.addSubview(imageView)

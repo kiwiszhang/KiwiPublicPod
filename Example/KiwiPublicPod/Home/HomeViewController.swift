@@ -102,7 +102,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 class HomeItemCell: SuperTableViewCell {
-    private lazy var titleLab = UILabel().hnFont(size: 14.h, weight: .medium).color(.systemCyan)
+    private lazy var titleLab = UILabel().hnFont(size: 14.h, weight: .mediumBase).color(.systemCyan)
     override func setUpUI() {
         titleLab.backgroundColor = .yellow
         contentView.addSubview(titleLab)
