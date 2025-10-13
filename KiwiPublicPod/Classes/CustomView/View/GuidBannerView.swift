@@ -1,21 +1,38 @@
-//
+    //
 //  GuidBannerView.swift
 //  MobileProject
 //
 //  Created by 笔尚文化 on 2025/9/17.
 //
 
+
 public struct GuidBannerItem {
     public var topImage: UIImage
     public var date: String
     public var title: String
     public var comment: String
+    
+    public var containerViewBg:UIColor?
+    public var dateLabColor:UIColor?
+    public var titleLabColor:UIColor?
+    public var subTitleColor:UIColor?
     // 公开初始化器
-    public init(topImage:UIImage, date: String, title: String, comment: String) {
+    public init(topImage:UIImage,
+                date: String,
+                title: String,
+                comment: String,
+                containerViewBg:UIColor? = kkColorFromHex("ECF2F1"),
+                dateLabColor:UIColor? = kkColorFromHex("A4A9B1"),
+                titleLabColor:UIColor? = kkColorFromHex("202124"),
+                subTitleColor:UIColor? = kkColorFromHex("5B5F65"),) {
         self.topImage = topImage
         self.date = date
         self.title = title
         self.comment = comment
+        self.containerViewBg = containerViewBg
+        self.dateLabColor = dateLabColor
+        self.titleLabColor = titleLabColor
+        self.subTitleColor = subTitleColor
     }
 }
 
@@ -291,5 +308,9 @@ public class GuidBannerViewCell: SuperCollectionViewCell {
         subTitle.text(comtent.comment)
         dateLab.text(comtent.date)
         imageView.image(comtent.topImage)
+        containerView.backgroundColor(comtent.containerViewBg!)
+        dateLab.color(comtent.dateLabColor!)
+        titleLab.color(comtent.titleLabColor!)
+        subTitle.color(comtent.subTitleColor!)
     }
 }
