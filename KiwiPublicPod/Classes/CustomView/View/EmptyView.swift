@@ -11,6 +11,7 @@ open class EmptyView: SuperView {
     // MARK: -  =====================lazyload=========================
     private var emptyImg = UIImageView().hidden(false)
     private var emptyLab = UILabel().text("noData").hnFont(size: 16.h, weight: .regularBase).color(kkColorFromHex("B4BBC9")).minimumScaleFactor(0.5).centerAligned()
+    
     // MARK: -  =====================Intial Methods===================
     open override func setUpUI() {
         self.addChildView([emptyImg,emptyLab])
