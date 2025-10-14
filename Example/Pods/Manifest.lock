@@ -1,19 +1,35 @@
 PODS:
-  - KiwiPublicPod (0.1.42):
+  - HandyJSON (5.0.0)
+  - Kingfisher (8.6.0)
+  - KiwiPublicPod (0.1.49):
     - Localize-Swift (~> 3.1.0)
     - SnapKit (~> 5.6.0)
   - Localize-Swift (3.1.0)
+  - MBProgressHUD (0.9.2)
   - SnapKit (5.6.0)
+  - SQLite.swift (0.13.3):
+    - SQLite.swift/standard (= 0.13.3)
+  - SQLite.swift/standard (0.13.3)
   - SwiftGen (6.6.3)
 
 DEPENDENCIES:
+  - HandyJSON (= 5.0.0)
+  - Kingfisher (~> 8.0)
   - KiwiPublicPod (from `../`)
+  - Localize-Swift (~> 3.1)
+  - MBProgressHUD (~> 0.9.2)
+  - SnapKit (~> 5.6.0)
+  - SQLite.swift (~> 0.13.0)
   - SwiftGen (~> 6.6.3)
 
 SPEC REPOS:
   trunk:
+    - HandyJSON
+    - Kingfisher
     - Localize-Swift
+    - MBProgressHUD
     - SnapKit
+    - SQLite.swift
     - SwiftGen
 
 EXTERNAL SOURCES:
@@ -21,11 +37,15 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KiwiPublicPod: e6c0151e93c5ac789cf61430ec0ff4ed7edd429a
+  HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
+  Kingfisher: 64278f126a815d0e2d391cdf71311b85882c4de0
+  KiwiPublicPod: b8ae98e0880aa879bf7c953dca11826850b58b3f
   Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
   SwiftGen: 4993cbf71cbc4886f775e26f8d5c3a1188ec9f99
 
-PODFILE CHECKSUM: 29f1fbc65076920cd465a0d7307c8292d876030c
+PODFILE CHECKSUM: c75350ff62bcf61b092b2c0747b4214dca141a51
 
 COCOAPODS: 1.16.2

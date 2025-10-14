@@ -1,17 +1,39 @@
 use_frameworks! :linkage => :dynamic
+use_local_pods = (ENV['CI'] != 'true') # 本地开发 true，CI 构建 false
 
 platform :ios, '15.0'
 
 target 'KiwiPublicPod_Example' do
-  pod 'KiwiPublicPod', :path => '../'
-#pod 'KiwiPublicPod', :git => "https://github.com/kiwiszhang/KiwiPublicPod.git"
-
+  # UI 布局
+  pod 'SnapKit', '~> 5.6.0'
+  
+  # 进度提示
+   pod 'MBProgressHUD', '~> 0.9.2'
+  
+  # 本地化
+  pod 'Localize-Swift', '~> 3.1'
+  
   # 开发环境专用
   pod 'SwiftGen', '~> 6.6.3', :configurations => ['Debug']
   
-#  pod 'MBProgressHUD', '~> 1.2.0'
-
   # 数据转模型
-#  pod 'HandyJSON', '5.0.0'
+  pod 'HandyJSON', '5.0.0'
+  
+  # 图片
+  pod 'Kingfisher', '~> 8.0'
+  
+  #  pod 'WeScan'
+  
+  
+  # 数据存储
+  pod 'SQLite.swift', '~> 0.13.0'
+  
+  if use_local_pods
+    puts "👉 本地环境：使用开发路径版本 KiwiPublicPod"
+    pod 'KiwiPublicPod', :path => '../'
+  else
+    puts "🚀 CI 构建：使用远程 tag 版本 KiwiPublicPod"
+    pod 'KiwiPublicPod', :git => 'https://github.com/kiwiszhang/KiwiPublicPod.git', :tag => '0.1.41'
+  end
   
 end

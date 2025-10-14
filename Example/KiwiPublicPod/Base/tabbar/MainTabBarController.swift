@@ -26,7 +26,7 @@ class MainTabBarController: UITabBarController {
             createNav(HomeViewController(), title: "首页", image: UIImage(named: "expends_unselected")!, selectedImage: UIImage(named: "expends")!),
             createNav(HomeViewController(), title: "报告", image: UIImage(named: "expends_unselected")!, selectedImage: UIImage(named: "expends_unselected")!),
             createNav(HomeViewController(), title: "总结", image: UIImage(named: "expends_unselected")!, selectedImage: UIImage(named: "expends_unselected")!),
-            createNav(HomeViewController(), title: "设置", image: UIImage(named: "expends_unselected")!, selectedImage: UIImage(named: "expends_unselected")!)
+            createNav(List01ViewController(), title: "设置", image: UIImage(named: "expends_unselected")!, selectedImage: UIImage(named: "expends_unselected")!)
         ]
         
         // 中间按钮点击
@@ -88,7 +88,7 @@ extension MainTabBarController {
         return selectedViewController?.customStatusBarHidden ?? StatusBarManager.shared.isHidden
     }
 
-    override var childViewControllerForStatusBarStyle: UIViewController? {
+    override var childForStatusBarStyle: UIViewController? {
         return selectedViewController
     }
 

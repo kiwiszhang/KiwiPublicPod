@@ -10,12 +10,12 @@ import UIKit
 import KiwiPublicPod
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         // 全局黑色状态栏显示
@@ -26,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 设置Tabbar
         setupTabBarAppearance()
 
+        //创建表
+        creatTable()
+        // cloud处理
+        iCloudHandle(application)
+        
         // 创建 window
         window = UIWindow(frame: UIScreen.main.bounds)
         let homeVC = MainTabBarController()
@@ -58,5 +63,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+private
+extension AppDelegate {
+    
+    func iCloudHandle(_ application: UIApplication) {
+        // 请求通知权限
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
+            if granted {
+                DispatchQueue.main.async {
+                    application.registerForRemoteNotifications()
+                }
+            }
+        }
+        // 注册订阅（比如监听 Person 表）
+        CloudKitPhotoManager.creatSubscription(to: RecordType.personType.rawValue)
+    }
+    
+    func creatTable(){
+    }
 }
 
