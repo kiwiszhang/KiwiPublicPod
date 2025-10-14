@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KiwiPublicPod'
-  s.version          = '0.1.47'
+  s.version          = '0.1.48'
   s.summary          = 'A short description of KiwiPublicPod.'
 
 # This description is used to generate tags and improve search results.
@@ -34,6 +34,7 @@ TODO: Add long description of the pod here.
   s.swift_versions   = '5'
   # 源码文件，保留 Classes 下的目录结构
   s.source_files = 'KiwiPublicPod/Classes/**/*.{swift,h,m}'
+  s.preserve_paths  = 'KiwiPublicPod/Classes'
 
   s.dependency 'SnapKit', '~> 5.6.0'
   s.dependency 'Localize-Swift', '~> 3.1.0'
