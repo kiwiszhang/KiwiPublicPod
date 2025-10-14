@@ -33,7 +33,7 @@ target 'KiwiPublicPod_Example' do
     pod 'KiwiPublicPod', :path => '../'
   else
     puts "🚀 CI 构建：使用远程 tag 版本 KiwiPublicPod"
-    pod 'KiwiPublicPod', :git => 'https://github.com/kiwiszhang/KiwiPublicPod.git', :tag => '0.1.41'
+    pod 'KiwiPublicPod', :git => 'https://github.com/kiwiszhang/KiwiPublicPod.git'
   end
   
 end

@@ -46,12 +46,35 @@
 		53B3A5792E9E37360049909B /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A5732E9E37360049909B /* PersonModel.swift */; };
 		53B3A57A2E9E37360049909B /* DataBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A5702E9E37360049909B /* DataBaseViewController.swift */; };
 		53B3A57D2E9E38650049909B /* SuperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A57B2E9E38650049909B /* SuperModel.swift */; };
+		53B3A5842E9E3DBB0049909B /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A5832E9E3DBB0049909B /* ReportViewController.swift */; };
+		53B3A5862E9E3E000049909B /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A5852E9E3E000049909B /* SummaryViewController.swift */; };
+		53B3A58A2E9E429B0049909B /* Widget01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A5892E9E429B0049909B /* Widget01ViewController.swift */; };
+		53B3A5A12E9E43BA0049909B /* new-guid-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A59B2E9E43BA0049909B /* new-guid-3.mp4 */; };
+		53B3A5A22E9E43BA0049909B /* ArchivoBlack-Regular-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A58C2E9E43BA0049909B /* ArchivoBlack-Regular-2.ttf */; };
+		53B3A5A32E9E43BA0049909B /* new-guid-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A59A2E9E43BA0049909B /* new-guid-2.mp4 */; };
+		53B3A5A42E9E43BA0049909B /* Inter-Light-7.otf in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A58E2E9E43BA0049909B /* Inter-Light-7.otf */; };
+		53B3A5A52E9E43BA0049909B /* new-guid-0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A5982E9E43BA0049909B /* new-guid-0.mp4 */; };
+		53B3A5A62E9E43BA0049909B /* currency.json in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A5962E9E43BA0049909B /* currency.json */; };
+		53B3A5A72E9E43BA0049909B /* Inter-Medium-8.otf in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A58F2E9E43BA0049909B /* Inter-Medium-8.otf */; };
+		53B3A5A82E9E43BA0049909B /* first_page_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A5922E9E43BA0049909B /* first_page_gif.gif */; };
+		53B3A5A92E9E43BA0049909B /* setting_animation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A59D2E9E43BA0049909B /* setting_animation.mp4 */; };
+		53B3A5AA2E9E43BA0049909B /* retrieve_earth.gif in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A5932E9E43BA0049909B /* retrieve_earth.gif */; };
+		53B3A5AB2E9E43BA0049909B /* new-guid-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A5992E9E43BA0049909B /* new-guid-1.mp4 */; };
+		53B3A5AD2E9E43BA0049909B /* new-guid-4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A59C2E9E43BA0049909B /* new-guid-4.mp4 */; };
+		53B3A5AE2E9E43BA0049909B /* Inter-Bold-4.otf in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A58D2E9E43BA0049909B /* Inter-Bold-4.otf */; };
+		53B3A5AF2E9E43BA0049909B /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A5952E9E43BA0049909B /* category.json */; };
+		53B3A5B02E9E43BA0049909B /* Inter-Regular-9.otf in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A5902E9E43BA0049909B /* Inter-Regular-9.otf */; };
+		53B3A5C02E9E47A70049909B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53B3A5BE2E9E47A70049909B /* Localizable.strings */; };
+		53B3A5CA2E9E4A400049909B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A5C52E9E4A400049909B /* Fonts.swift */; };
+		53B3A5CB2E9E4A400049909B /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A5C72E9E4A400049909B /* JSON.swift */; };
+		53B3A5CC2E9E4A400049909B /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A5C62E9E4A400049909B /* Images.swift */; };
+		53B3A5CD2E9E4A400049909B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A5C92E9E4A400049909B /* Strings.swift */; };
+		53B3A5CE2E9E4A400049909B /* MediaFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A5C82E9E4A400049909B /* MediaFiles.swift */; };
 		53B99B3D2E8A1EEF0000FD83 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B99B392E8A1EEF0000FD83 /* CustomTabBar.swift */; };
 		53B99B3F2E8A1EEF0000FD83 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B99B3A2E8A1EEF0000FD83 /* MainTabBarController.swift */; };
 		53B99B452E8A21870000FD83 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B99B442E8A21870000FD83 /* HomeViewController.swift */; };
 		53B99B472E8A64960000FD83 /* WidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B99B462E8A64960000FD83 /* WidgetViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		9D7C627990386FC56695EF66 /* Pods_KiwiPublicPod_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 947444DD03C67369C78DC544 /* Pods_KiwiPublicPod_Example.framework */; };
@@ -99,6 +122,32 @@
 		53B3A5732E9E37360049909B /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		53B3A57B2E9E38650049909B /* SuperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperModel.swift; sourceTree = "<group>"; };
 		53B3A57E2E9E392A0049909B /* KiwiPublicPod_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KiwiPublicPod_Example.entitlements; sourceTree = "<group>"; };
+		53B3A5832E9E3DBB0049909B /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		53B3A5852E9E3E000049909B /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		53B3A5892E9E429B0049909B /* Widget01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget01ViewController.swift; sourceTree = "<group>"; };
+		53B3A58C2E9E43BA0049909B /* ArchivoBlack-Regular-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArchivoBlack-Regular-2.ttf"; sourceTree = "<group>"; };
+		53B3A58D2E9E43BA0049909B /* Inter-Bold-4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold-4.otf"; sourceTree = "<group>"; };
+		53B3A58E2E9E43BA0049909B /* Inter-Light-7.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light-7.otf"; sourceTree = "<group>"; };
+		53B3A58F2E9E43BA0049909B /* Inter-Medium-8.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium-8.otf"; sourceTree = "<group>"; };
+		53B3A5902E9E43BA0049909B /* Inter-Regular-9.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular-9.otf"; sourceTree = "<group>"; };
+		53B3A5922E9E43BA0049909B /* first_page_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = first_page_gif.gif; sourceTree = "<group>"; };
+		53B3A5932E9E43BA0049909B /* retrieve_earth.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = retrieve_earth.gif; sourceTree = "<group>"; };
+		53B3A5952E9E43BA0049909B /* category.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
+		53B3A5962E9E43BA0049909B /* currency.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currency.json; sourceTree = "<group>"; };
+		53B3A5982E9E43BA0049909B /* new-guid-0.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "new-guid-0.mp4"; sourceTree = "<group>"; };
+		53B3A5992E9E43BA0049909B /* new-guid-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "new-guid-1.mp4"; sourceTree = "<group>"; };
+		53B3A59A2E9E43BA0049909B /* new-guid-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "new-guid-2.mp4"; sourceTree = "<group>"; };
+		53B3A59B2E9E43BA0049909B /* new-guid-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "new-guid-3.mp4"; sourceTree = "<group>"; };
+		53B3A59C2E9E43BA0049909B /* new-guid-4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "new-guid-4.mp4"; sourceTree = "<group>"; };
+		53B3A59D2E9E43BA0049909B /* setting_animation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = setting_animation.mp4; sourceTree = "<group>"; };
+		53B3A5BF2E9E47A70049909B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		53B3A5C12E9E48FE0049909B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		53B3A5C42E9E49620049909B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		53B3A5C52E9E4A400049909B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		53B3A5C62E9E4A400049909B /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		53B3A5C72E9E4A400049909B /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		53B3A5C82E9E4A400049909B /* MediaFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFiles.swift; sourceTree = "<group>"; };
+		53B3A5C92E9E4A400049909B /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		53B99B392E8A1EEF0000FD83 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		53B99B3A2E8A1EEF0000FD83 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		53B99B442E8A21870000FD83 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +157,6 @@
 		607FACD01AFB9204008FA782 /* KiwiPublicPod_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiwiPublicPod_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6E15FA18FD502A3008D93FEE /* KiwiPublicPod.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KiwiPublicPod.podspec; path = ../KiwiPublicPod.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -249,9 +297,84 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		53B3A58B2E9E43B30049909B /* other */ = {
+			isa = PBXGroup;
+			children = (
+				53B3A5A02E9E43BA0049909B /* source */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+		53B3A5912E9E43BA0049909B /* font */ = {
+			isa = PBXGroup;
+			children = (
+				53B3A58C2E9E43BA0049909B /* ArchivoBlack-Regular-2.ttf */,
+				53B3A58D2E9E43BA0049909B /* Inter-Bold-4.otf */,
+				53B3A58E2E9E43BA0049909B /* Inter-Light-7.otf */,
+				53B3A58F2E9E43BA0049909B /* Inter-Medium-8.otf */,
+				53B3A5902E9E43BA0049909B /* Inter-Regular-9.otf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		53B3A5942E9E43BA0049909B /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				53B3A5922E9E43BA0049909B /* first_page_gif.gif */,
+				53B3A5932E9E43BA0049909B /* retrieve_earth.gif */,
+			);
+			path = gif;
+			sourceTree = "<group>";
+		};
+		53B3A5972E9E43BA0049909B /* json */ = {
+			isa = PBXGroup;
+			children = (
+				53B3A5952E9E43BA0049909B /* category.json */,
+				53B3A5962E9E43BA0049909B /* currency.json */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		53B3A59E2E9E43BA0049909B /* videos */ = {
+			isa = PBXGroup;
+			children = (
+				53B3A5982E9E43BA0049909B /* new-guid-0.mp4 */,
+				53B3A5992E9E43BA0049909B /* new-guid-1.mp4 */,
+				53B3A59A2E9E43BA0049909B /* new-guid-2.mp4 */,
+				53B3A59B2E9E43BA0049909B /* new-guid-3.mp4 */,
+				53B3A59C2E9E43BA0049909B /* new-guid-4.mp4 */,
+				53B3A59D2E9E43BA0049909B /* setting_animation.mp4 */,
+			);
+			path = videos;
+			sourceTree = "<group>";
+		};
+		53B3A5A02E9E43BA0049909B /* source */ = {
+			isa = PBXGroup;
+			children = (
+				53B3A5912E9E43BA0049909B /* font */,
+				53B3A5942E9E43BA0049909B /* gif */,
+				53B3A5972E9E43BA0049909B /* json */,
+				53B3A59E2E9E43BA0049909B /* videos */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		53B3A5B22E9E45820049909B /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				53B3A5C52E9E4A400049909B /* Fonts.swift */,
+				53B3A5C62E9E4A400049909B /* Images.swift */,
+				53B3A5C72E9E4A400049909B /* JSON.swift */,
+				53B3A5C82E9E4A400049909B /* MediaFiles.swift */,
+				53B3A5C92E9E4A400049909B /* Strings.swift */,
+			);
+			path = generated;
+			sourceTree = "<group>";
+		};
 		53B99B382E8A1EEC0000FD83 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				53B3A58B2E9E43B30049909B /* other */,
 				53B3A57C2E9E38650049909B /* model */,
 				53B3A5742E9E37360049909B /* database */,
 				53B3A5222E9E27F90049909B /* Tools */,
@@ -274,6 +397,7 @@
 			children = (
 				53B99B442E8A21870000FD83 /* HomeViewController.swift */,
 				53B99B462E8A64960000FD83 /* WidgetViewController.swift */,
+				53B3A5892E9E429B0049909B /* Widget01ViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -281,6 +405,7 @@
 		53B99B412E8A215F0000FD83 /* Report */ = {
 			isa = PBXGroup;
 			children = (
+				53B3A5832E9E3DBB0049909B /* ReportViewController.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -288,6 +413,7 @@
 		53B99B422E8A21670000FD83 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				53B3A5852E9E3E000049909B /* SummaryViewController.swift */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -323,6 +449,7 @@
 		607FACD21AFB9204008FA782 /* Example for KiwiPublicPod */ = {
 			isa = PBXGroup;
 			children = (
+				53B3A5B22E9E45820049909B /* generated */,
 				53B3A52B2E9E2A9D0049909B /* group */,
 				53B99B432E8A21740000FD83 /* Setting */,
 				53B99B422E8A21670000FD83 /* Summary */,
@@ -330,8 +457,8 @@
 				53B99B402E8A21540000FD83 /* Home */,
 				53B99B382E8A1EEC0000FD83 /* Base */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				53B3A5292E9E285D0049909B /* GlobalImports.swift */,
+				53B3A5BE2E9E47A70049909B /* Localizable.strings */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -379,6 +506,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				ACB20DCE3CC86B782C12E4ED /* [CP] Embed Pods Frameworks */,
+				53B3A5B12E9E45440049909B /* SwiftGen Script */,
 			);
 			buildRules = (
 			);
@@ -412,8 +540,12 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
-				en,
 				Base,
+				"zh-Hans",
+				en,
+				"zh-Hant",
+				ca,
+				fr,
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
@@ -432,10 +564,26 @@
 			files = (
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				53B3A5C02E9E47A70049909B /* Localizable.strings in Resources */,
 				53B3A5652E9E2AF50049909B /* Products.plist in Resources */,
 				53B3A5662E9E2AF50049909B /* Configuration.storekit in Resources */,
 				53B3A5672E9E2AF50049909B /* 428AC58F.png in Resources */,
 				53B3A5682E9E2AF50049909B /* 583834B5.png in Resources */,
+				53B3A5A12E9E43BA0049909B /* new-guid-3.mp4 in Resources */,
+				53B3A5A22E9E43BA0049909B /* ArchivoBlack-Regular-2.ttf in Resources */,
+				53B3A5A32E9E43BA0049909B /* new-guid-2.mp4 in Resources */,
+				53B3A5A42E9E43BA0049909B /* Inter-Light-7.otf in Resources */,
+				53B3A5A52E9E43BA0049909B /* new-guid-0.mp4 in Resources */,
+				53B3A5A62E9E43BA0049909B /* currency.json in Resources */,
+				53B3A5A72E9E43BA0049909B /* Inter-Medium-8.otf in Resources */,
+				53B3A5A82E9E43BA0049909B /* first_page_gif.gif in Resources */,
+				53B3A5A92E9E43BA0049909B /* setting_animation.mp4 in Resources */,
+				53B3A5AA2E9E43BA0049909B /* retrieve_earth.gif in Resources */,
+				53B3A5AB2E9E43BA0049909B /* new-guid-1.mp4 in Resources */,
+				53B3A5AD2E9E43BA0049909B /* new-guid-4.mp4 in Resources */,
+				53B3A5AE2E9E43BA0049909B /* Inter-Bold-4.otf in Resources */,
+				53B3A5AF2E9E43BA0049909B /* category.json in Resources */,
+				53B3A5B02E9E43BA0049909B /* Inter-Regular-9.otf in Resources */,
 				53B3A5692E9E2AF50049909B /* C4BE5869.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +591,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		53B3A5B12E9E45440049909B /* SwiftGen Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftGen Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# 调试日志（编译后可在 Report Navigator 查看）\necho \"=== 环境检查 ===\"\necho \"CONFIGURATION: ${CONFIGURATION}\"\necho \"PROJECT_DIR: ${PROJECT_DIR}\"\n\nif [[ \"${CONFIGURATION}\" = \"Debug\" || \"${CONFIGURATION}\" = \"Staging\" ]]; then\n    \"${PROJECT_DIR}/Pods/SwiftGen/bin/swiftgen\" config run --config \"${PROJECT_DIR}/swiftgen.yml\"\nelif [[ \"${CONFIGURATION}\" = \"Release\" ]]; then\n    echo \"Skipping SwiftGen in production (Release config)\"\nfi\n";
+		};
 		9F105866C2031C0F50CB03C0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,10 +669,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				53B3A53A2E9E2AE00049909B /* StrategyFooterA.swift in Sources */,
+				53B3A58A2E9E429B0049909B /* Widget01ViewController.swift in Sources */,
 				53B3A53B2E9E2AE00049909B /* StrategyBase.swift in Sources */,
 				53B3A53C2E9E2AE00049909B /* StrategyFooterB.swift in Sources */,
 				53B3A57D2E9E38650049909B /* SuperModel.swift in Sources */,
 				53B3A53D2E9E2AE00049909B /* CoreDataViewController.swift in Sources */,
+				53B3A5862E9E3E000049909B /* SummaryViewController.swift in Sources */,
 				53B3A56A2E9E2AF50049909B /* PurchaseTableHeaderView.swift in Sources */,
 				53B3A56B2E9E2AF50049909B /* PurchaseViewController.swift in Sources */,
 				53B3A56C2E9E2AF50049909B /* Store.swift in Sources */,
@@ -518,9 +686,14 @@
 				53B3A5422E9E2AE00049909B /* StrategyHeaderA.swift in Sources */,
 				53B3A5432E9E2AE00049909B /* StrategyViewController.swift in Sources */,
 				53B3A5442E9E2AE00049909B /* CoreDataManager.swift in Sources */,
+				53B3A5842E9E3DBB0049909B /* ReportViewController.swift in Sources */,
 				53B99B3D2E8A1EEF0000FD83 /* CustomTabBar.swift in Sources */,
 				53B99B3F2E8A1EEF0000FD83 /* MainTabBarController.swift in Sources */,
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				53B3A5CA2E9E4A400049909B /* Fonts.swift in Sources */,
+				53B3A5CB2E9E4A400049909B /* JSON.swift in Sources */,
+				53B3A5CC2E9E4A400049909B /* Images.swift in Sources */,
+				53B3A5CD2E9E4A400049909B /* Strings.swift in Sources */,
+				53B3A5CE2E9E4A400049909B /* MediaFiles.swift in Sources */,
 				53B3A52A2E9E285D0049909B /* GlobalImports.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				53B99B472E8A64960000FD83 /* WidgetViewController.swift in Sources */,
@@ -548,6 +721,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		53B3A5BE2E9E47A70049909B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53B3A5BF2E9E47A70049909B /* en */,
+				53B3A5C12E9E48FE0049909B /* zh-Hans */,
+				53B3A5C42E9E49620049909B /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -563,6 +746,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -616,6 +800,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

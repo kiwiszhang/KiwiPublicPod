@@ -24,8 +24,8 @@ class MainTabBarController: UITabBarController {
         // 添加子控制器
         viewControllers = [
             createNav(HomeViewController(), title: "首页", image: UIImage(named: "expends_unselected")!, selectedImage: UIImage(named: "expends")!),
-            createNav(HomeViewController(), title: "报告", image: UIImage(named: "expends_unselected")!, selectedImage: UIImage(named: "expends_unselected")!),
-            createNav(HomeViewController(), title: "总结", image: UIImage(named: "expends_unselected")!, selectedImage: UIImage(named: "expends_unselected")!),
+            createNav(ReportViewController(), title: "报告", image: UIImage(named: "expends_unselected")!, selectedImage: UIImage(named: "expends_unselected")!),
+            createNav(SummaryViewController(), title: "总结", image: UIImage(named: "expends_unselected")!, selectedImage: UIImage(named: "expends_unselected")!),
             createNav(List01ViewController(), title: "设置", image: UIImage(named: "expends_unselected")!, selectedImage: UIImage(named: "expends_unselected")!)
         ]
         
