@@ -134,11 +134,12 @@ open class GuidBannerView: UIView {
         cv.dataSource = self
         cv.delegate = self
         cv.clipsToBounds = false
+        cv.backgroundColor(.clear)
         cv.register(GuidBannerViewCell.self, forCellWithReuseIdentifier: "GuidBannerViewCell")
         return cv
     }()
 
-    private let pageControl = UIPageControl().hidden(true)
+    private lazy var pageControl = UIPageControl().hidden(true)
     private var totalItems: Int { items.count * 3 }
     private var currentIndex: Int {
         let center = CGPoint(x: collectionView.contentOffset.x + collectionView.bounds.width/2,

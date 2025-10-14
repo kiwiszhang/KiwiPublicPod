@@ -20,6 +20,22 @@ public struct PageControlViewConfig {
     let spacing: CGFloat
     let animateDuration: Double
     
+    public init(
+        pageCount: Int,
+        currentPage: Int,
+        dotColor: UIColor,
+        selectedDotColor: UIColor,
+        spacing: CGFloat,
+        animateDuration: Double
+    ) {
+        self.pageCount = pageCount
+        self.currentPage = currentPage
+        self.dotColor = dotColor
+        self.selectedDotColor = selectedDotColor
+        self.spacing = spacing
+        self.animateDuration = animateDuration
+    }
+
     public static let `default` = PageControlViewConfig(
         pageCount: 5,
         currentPage: 0,

@@ -7,12 +7,22 @@
 
 import UIKit
 
-struct LinearProgressViewConfig {
+public struct LinearProgressViewConfig {
     let progressColor: UIColor
     let trackColor: UIColor
     let animateDuration: Double
     
-    static let `default` = LinearProgressViewConfig(
+    public init(
+        progressColor: UIColor,
+        trackColor: UIColor,
+        animateDuration: Double
+    ) {
+        self.progressColor = progressColor
+        self.trackColor = trackColor
+        self.animateDuration = animateDuration
+    }
+
+    public static let `default` = LinearProgressViewConfig(
         progressColor: .blue,
         trackColor: .lightGray,
         animateDuration: 0.3
@@ -29,7 +39,7 @@ open class LinearProgressView: SuperView {
     private lazy var progressView = UIView()
     
     // MARK: - 初始化方法
-    convenience init(config: LinearProgressViewConfig = LinearProgressViewConfig.default) {
+    public convenience init(config: LinearProgressViewConfig = LinearProgressViewConfig.default) {
         self.init(frame: CGRect.zero)
         self.config = config
         setUpUI()
