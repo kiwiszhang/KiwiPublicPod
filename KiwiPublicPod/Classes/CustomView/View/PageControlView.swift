@@ -65,7 +65,7 @@ open class PageControlView: SuperView {
     
     private var config = PageControlViewConfig.default
     
-    weak var delegate: PageControlViewDelegate?
+    public weak var delegate: PageControlViewDelegate?
     private var dots = [UIView]()
     
     // MARK: - 初始化方法

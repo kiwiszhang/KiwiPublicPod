@@ -12,7 +12,7 @@ import KiwiPublicPod
 
 class HomeViewController: SuperViewController {
     
-    private var itemList:[String] = ["基础控件使用","GuidBannerView","AlertViewBlock","LinearProgressView","PageControlView","PopupContainerViewController","VideoPlayerView"]
+    private var itemList:[String] = ["基础控件使用","自定义控件00","CustomView"]
     // MARK: -  =======================lazy========================
     private lazy var headerView = UILabel().text("tableHeader").centerAligned().backgroundColor(.systemCyan)
     private lazy var footerView = UILabel().text("footerView").centerAligned().backgroundColor(.systemCyan)
@@ -59,7 +59,7 @@ class HomeViewController: SuperViewController {
         headerView.frame = CGRect(x: 0, y: 0, width:kkScreenWidth, height: 100.h)
         tableView.tableFooter(footerView)
         footerView.frame = CGRect(x: 0, y: 0, width:kkScreenWidth, height: 100.h)
-        itemList = ["基础控件使用"]
+//        itemList = ["基础控件使用"]
         tableView.reloadData()
     }
     
@@ -88,6 +88,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             self.navigationController?.pushViewController(WidgetViewController(), animated: true)
+        }else if indexPath.row == 1 {
+            self.navigationController?.pushViewController(Widget01ViewController(), animated: true)
+        }else if indexPath.row == 2 {
+            self.navigationController?.pushViewController(Widget01ViewController(), animated: true)
+        }else if indexPath.row == 1 {
+            self.navigationController?.pushViewController(Widget01ViewController(), animated: true)
+        }else if indexPath.row == 1 {
+            self.navigationController?.pushViewController(Widget01ViewController(), animated: true)
+        }else if indexPath.row == 1 {
+            self.navigationController?.pushViewController(Widget01ViewController(), animated: true)
         }
     }
     
@@ -104,7 +114,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 class HomeItemCell: SuperTableViewCell {
     private lazy var titleLab = UILabel().hnFont(size: 14.h, weight: .mediumBase).color(.systemCyan)
     override func setUpUI() {
-        titleLab.backgroundColor = .yellow
+        titleLab.backgroundColor = .white
         contentView.addSubview(titleLab)
         titleLab.snp.makeConstraints { make in
             make.edges.equalToSuperview()

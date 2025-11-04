@@ -10,6 +10,7 @@ import UIKit
 import KiwiPublicPod
 
 class WidgetViewController: SuperViewController {
+    var dismissAction: (() -> Void)?
     
     // MARK: - =====================lazy load=======================
     private lazy var testView = UIView().backgroundColor(kkColorFromHex("34ab13")).hidden(false).tag(1).border(width: 1, color: .systemRed).cornerRadius(10, corners: [.topLeft,.bottomLeft]).alpha(0.9).clipsToBounds(true).contentMode(.scaleToFill).enable(true).onTap {
