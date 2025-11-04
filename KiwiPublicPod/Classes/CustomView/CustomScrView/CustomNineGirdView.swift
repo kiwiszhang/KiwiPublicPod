@@ -8,8 +8,8 @@
 
 import UIKit
 
-class CustomNineGirdView: SuperView {
-    var nineGirdViewHeight: CGFloat = 0
+public class CustomNineGirdView: SuperView {
+    public var nineGirdViewHeight: CGFloat = 0
     
     /// 九宫格
     ///
@@ -20,7 +20,7 @@ class CustomNineGirdView: SuperView {
     ///   - colums: 列
     ///   - HMargin: 水平间距
     ///   - VMargin: 垂直间距
-    init(viewArray: [UIView], nineGirdWidth: CGFloat, itemHeight: (CGFloat, Bool), colums: NSInteger, HMargin: CGFloat, VMargin: CGFloat) {
+    public init(viewArray: [UIView], nineGirdWidth: CGFloat, itemHeight: (CGFloat, Bool), colums: NSInteger, HMargin: CGFloat, VMargin: CGFloat) {
         super.init(frame: CGRect.zero)
         
         let itemViewWidth = (nineGirdWidth - CGFloat(colums - 1) * HMargin) / CGFloat(colums)
@@ -58,7 +58,7 @@ class CustomNineGirdView: SuperView {
     ///   - itemHeight: <1 高/宽 >1 高度值
     ///   - colums: 列
     ///   - VMargin: 垂直间距
-    init(viewArray: [UIView], nineGirdWidth: CGFloat, itemWidth: CGFloat, itemHeight: (CGFloat, Bool), colums: NSInteger, VMargin: CGFloat, maxHMargin: CGFloat = CGFloat(MAXFLOAT)) {
+    public init(viewArray: [UIView], nineGirdWidth: CGFloat, itemWidth: CGFloat, itemHeight: (CGFloat, Bool), colums: NSInteger, VMargin: CGFloat, maxHMargin: CGFloat = CGFloat(MAXFLOAT)) {
         super.init(frame: CGRect.zero)
         
         let itemViewWidth = itemWidth
