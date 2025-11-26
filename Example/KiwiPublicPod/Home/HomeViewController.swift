@@ -12,9 +12,9 @@ import KiwiPublicPod
 
 class HomeViewController: SuperViewController {
     
-    private var itemList:[String] = ["基础控件使用","自定义控件00","CustomScrView","CustomNineGirdView","视频播放"]
+    private var itemList:[String] = ["基础控件使用","自定义控件00","CustomScrView","CustomNineGirdView","视频播放","新闻列表"]
     // MARK: -  =======================lazy========================
-    private lazy var headerView = UILabel().text("tableHeader").centerAligned().backgroundColor(.systemCyan)
+    private lazy var headerView = UILabel().text("tableHeader").centerAligned().backgroundColor(.black)
     private lazy var footerView = UILabel().text("footerView").centerAligned().backgroundColor(.systemCyan)
     private lazy var tableView = {
         return UITableView(frame: .zero, style: .grouped)
@@ -96,6 +96,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             self.navigationController?.pushViewController(Widget03ViewController(), animated: true)
         }else if indexPath.row == 4 {
             self.navigationController?.pushViewController(Widget04ViewController(), animated: true)
+        }else if indexPath.row == 5 {
+            self.navigationController?.pushViewController(Widget05ViewController(), animated: true)
         }
     }
     

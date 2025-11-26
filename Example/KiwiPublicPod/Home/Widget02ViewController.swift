@@ -75,7 +75,7 @@ class Widget02ViewController: SuperViewController {
 
     // MARK: - 2. 标题栏
     private func setupTabBar() {
-        let titles = ["推荐", "视频", "热点", "娱乐", "体育", "科技"]
+        let titles = ["推荐", "视频视频", "热点", "娱乐视频视频", "体育", "科技"]
         let tabBar = CustomScrView(
             btnProprety: (.darkGray, .red,
                           .systemFont(ofSize: 14),

@@ -38,11 +38,11 @@ class Widget03ViewController: SuperViewController {
         // 2. 初始化 CustomNineGirdView
         let nineGird = CustomNineGirdView(
             viewArray: buttonArray,
-            nineGirdWidth: view.frame.width - 40,   // 九宫格总宽度
-            itemHeight: (80, true),                // item高度固定 80
-            colums: 4,                              // 每行 3 列
-            HMargin: 10,                            // 水平间距 10
-            VMargin: 10                             // 垂直间距 10
+            nineGirdWidth: kkScreenWidth - 80.w,   // 九宫格总宽度
+            itemHeight: (140.w, true),                // item高度固定 80
+            colums: 2,                              // 每行 3 列
+            HMargin: 14.h,                            // 水平间距 10
+            VMargin: 14.w                             // 垂直间距 10
         )
 
         
