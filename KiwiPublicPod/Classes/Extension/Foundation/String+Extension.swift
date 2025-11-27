@@ -386,6 +386,15 @@ extension String {
         formatter.locale = locale
         return formatter.string(from: date)
     }
+    /// Jul 04, 2025格式转时间戳
+    public func MMMddyyyytoTimestamp(_ format: String = "MMM dd,yyyy") -> Int64? {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone = TimeZone.current
+        formatter.dateFormat = format
+        guard let date = formatter.date(from: self) else { return nil }
+        return Int64(date.timeIntervalSince1970)
+    }
     
     /// 计算字符串在指定字体下的宽度（单行）
     public func width(forFont font: UIFont) -> CGFloat {
