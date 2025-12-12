@@ -25,8 +25,11 @@ public extension UILabel {
     @discardableResult
     func text(_ text: String?) -> Self {
         self.text = text
+        adjustsFontSizeToFitWidth = true
+        minimumScaleFactor = 0.4
         return self
     }
+
     
     @discardableResult
     func minimumScaleFactor(_ scale: Double) -> Self {
@@ -261,3 +264,4 @@ public extension UILabel {
         return self
     }
 }
+
