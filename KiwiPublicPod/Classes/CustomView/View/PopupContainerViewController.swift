@@ -10,6 +10,7 @@ import UIKit
 open class PopupContainerViewController: SuperViewController {
     private let contentVC: UIViewController
     private let contentHeight: CGFloat
+    private var isMiddle: Bool = false
     var onDismiss: (() -> Void)?    // 点击内容内部按钮调用
     private var bottomConstraint: Constraint?   // SnapKit 的约束引用
 //    private var panGesture: UIPanGestureRecognizer!
@@ -17,6 +18,15 @@ open class PopupContainerViewController: SuperViewController {
     public init(contentVC: UIViewController, height: CGFloat = 300) {
         self.contentVC = contentVC
         self.contentHeight = height
+        super.init(nibName: nil, bundle: nil)
+        modalPresentationStyle = .overFullScreen
+        modalTransitionStyle = .crossDissolve
+    }
+    
+    public init(contentVC: UIViewController, height: CGFloat = 300,isMiddle:Bool = false) {
+        self.contentVC = contentVC
+        self.contentHeight = height
+        self.isMiddle = isMiddle
         super.init(nibName: nil, bundle: nil)
         modalPresentationStyle = .overFullScreen
         modalTransitionStyle = .crossDissolve
@@ -29,7 +39,7 @@ open class PopupContainerViewController: SuperViewController {
 
         // 半透明背景
         view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
-
+//        applyTransparentBlur(to: view)
         // 点击背景关闭
         let tap = UITapGestureRecognizer(target: self, action: #selector(backgroundTapped(_:)))
         tap.cancelsTouchesInView = false
@@ -52,6 +62,12 @@ open class PopupContainerViewController: SuperViewController {
         contentVC.view.layer.cornerRadius = 20
         contentVC.view.layer.masksToBounds = true
 
+        if isMiddle {
+            view.backgroundColor = .clear
+            contentVC.view.layer.cornerRadius = 0
+            contentVC.view.layer.masksToBounds = false
+        }
+        
         // 添加下拉手势
 //        panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
 //        panGesture.delegate = self
@@ -61,6 +77,25 @@ open class PopupContainerViewController: SuperViewController {
     open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animateIn()
+    }
+    
+    func applyTransparentBlur(to view: UIView,
+                              blurStyle: UIBlurEffect.Style = .systemUltraThinMaterial,
+                              alpha: CGFloat = 0.02) {
+
+        // 1. 系统超薄毛玻璃
+        let blurEffect = UIBlurEffect(style: blurStyle)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.alpha = 0.9
+        blurView.frame = view.bounds
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(blurView)
+
+        // 2. 添加透明蒙版，使毛玻璃更通透
+        let overlay = UIView(frame: blurView.bounds)
+        overlay.backgroundColor = UIColor.white.withAlphaComponent(alpha)
+        overlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurView.contentView.addSubview(overlay)
     }
     
     @objc private func backgroundTapped(_ gesture: UITapGestureRecognizer) {
