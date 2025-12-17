@@ -12,6 +12,7 @@
 		53734DF12EB9AD540005ED8B /* Widget02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53734DF02EB9AD540005ED8B /* Widget02ViewController.swift */; };
 		53734DF32EB9DC680005ED8B /* Widget03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53734DF22EB9DC680005ED8B /* Widget03ViewController.swift */; };
 		53734DF52EB9DEA10005ED8B /* Widget04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53734DF42EB9DEA10005ED8B /* Widget04ViewController.swift */; };
+		538282262EF24E0C0097EAD0 /* Widget06ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538282252EF24E0C0097EAD0 /* Widget06ViewController.swift */; };
 		53B3A5242E9E281A0049909B /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A5232E9E281A0049909B /* Common.swift */; };
 		53B3A5272E9E28360049909B /* NotificationCenterKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A5252E9E28360049909B /* NotificationCenterKeys.swift */; };
 		53B3A5282E9E28360049909B /* UserDefaultsTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3A5262E9E28360049909B /* UserDefaultsTools.swift */; };
@@ -92,6 +93,7 @@
 		53734DF02EB9AD540005ED8B /* Widget02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget02ViewController.swift; sourceTree = "<group>"; };
 		53734DF22EB9DC680005ED8B /* Widget03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget03ViewController.swift; sourceTree = "<group>"; };
 		53734DF42EB9DEA10005ED8B /* Widget04ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget04ViewController.swift; sourceTree = "<group>"; };
+		538282252EF24E0C0097EAD0 /* Widget06ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget06ViewController.swift; sourceTree = "<group>"; };
 		53B3A5232E9E281A0049909B /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		53B3A5252E9E28360049909B /* NotificationCenterKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterKeys.swift; sourceTree = "<group>"; };
 		53B3A5262E9E28360049909B /* UserDefaultsTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsTools.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 				53734DF22EB9DC680005ED8B /* Widget03ViewController.swift */,
 				53734DF42EB9DEA10005ED8B /* Widget04ViewController.swift */,
 				530C84962EC4708C0037290D /* Widget05ViewController.swift */,
+				538282252EF24E0C0097EAD0 /* Widget06ViewController.swift */,
 				530C84982EC47FCB0037290D /* TemplateList.swift */,
 			);
 			path = Home;
@@ -683,6 +686,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				538282262EF24E0C0097EAD0 /* Widget06ViewController.swift in Sources */,
 				53B3A53A2E9E2AE00049909B /* StrategyFooterA.swift in Sources */,
 				53B3A58A2E9E429B0049909B /* Widget01ViewController.swift in Sources */,
 				53B3A53B2E9E2AE00049909B /* StrategyBase.swift in Sources */,

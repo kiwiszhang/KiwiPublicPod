@@ -1,7 +1,7 @@
 PODS:
   - HandyJSON (5.0.0)
   - Kingfisher (8.6.0)
-  - KiwiPublicPod (0.1.50):
+  - KiwiPublicPod (1.0.0):
     - Localize-Swift (~> 3.2.0)
     - SnapKit (~> 5.7.1)
   - Localize-Swift (3.2.0):
@@ -44,7 +44,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   Kingfisher: 64278f126a815d0e2d391cdf71311b85882c4de0
-  KiwiPublicPod: d34748ae1e26173cb9d49081bdbcb6ce9e9997c1
+  KiwiPublicPod: 14e0c7bdf08b8922bb7585b04ec90afb86a1244f
   Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
