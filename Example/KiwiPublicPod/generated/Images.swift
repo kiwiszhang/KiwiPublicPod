@@ -26,6 +26,9 @@ internal enum Asset {
   internal static let _2 = ImageAsset(name: "2")
   internal static let _3 = ImageAsset(name: "3")
   internal static let _4 = ImageAsset(name: "4")
+  internal static let delete = ImageAsset(name: "delete")
+  internal static let editSummary = ImageAsset(name: "edit_summary")
+  internal static let editTranscript = ImageAsset(name: "edit_transcript")
   internal static let guidStar = ImageAsset(name: "guid-star")
   internal static let summary = ImageAsset(name: "Summary")
   internal static let summaryUnselected = ImageAsset(name: "Summary_unselected")
@@ -36,6 +39,7 @@ internal enum Asset {
   internal static let setting = ImageAsset(name: "setting")
   internal static let settingUnselected = ImageAsset(name: "setting_unselected")
   internal static let takePic = ImageAsset(name: "takePic")
+  internal static let translate = ImageAsset(name: "translate")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

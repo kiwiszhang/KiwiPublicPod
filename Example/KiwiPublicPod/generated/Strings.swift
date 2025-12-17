@@ -10,6 +10,10 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// Edit Summary
+  internal static var editSummary: String { return L10n.tr("Localizable", "Edit Summary", fallback: "Edit Summary") }
+  /// Edit Transcript
+  internal static var editTranscript: String { return L10n.tr("Localizable", "Edit Transcript", fallback: "Edit Transcript") }
   /// Localizable.strings
   ///   KiwiPublicPod
   /// 
@@ -18,6 +22,10 @@ internal enum L10n {
   internal static var month: String { return L10n.tr("Localizable", "Month", fallback: "Month") }
   /// Report
   internal static var report: String { return L10n.tr("Localizable", "Report", fallback: "Report") }
+  /// Transcription
+  internal static var transcription: String { return L10n.tr("Localizable", "Transcription", fallback: "Transcription") }
+  /// Translate
+  internal static var translate: String { return L10n.tr("Localizable", "Translate", fallback: "Translate") }
   /// Year
   internal static var year: String { return L10n.tr("Localizable", "Year", fallback: "Year") }
 }

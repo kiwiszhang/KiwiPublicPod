@@ -12,7 +12,7 @@ import KiwiPublicPod
 
 class HomeViewController: SuperViewController {
     
-    private var itemList:[String] = ["基础控件使用","自定义控件00","CustomScrView","CustomNineGirdView","视频播放","新闻列表","胶囊Segment"]
+    private var itemList:[String] = ["基础控件使用","自定义控件00","CustomScrView","CustomNineGirdView","视频播放","新闻列表","胶囊Segment,弹框选择"]
     // MARK: -  =======================lazy========================
     private lazy var headerView = UILabel().text("tableHeader").centerAligned().backgroundColor(.systemPink)
     private lazy var footerView = UILabel().text("footerView").centerAligned().backgroundColor(.systemCyan)

@@ -13,6 +13,22 @@ class Widget06ViewController: SuperViewController, UIScrollViewDelegate {
     // MARK: -  =====================lazyload=========================
     lazy var segmentedView = CapsuleSegmentedView(items: [], style: .defaultStyle)
 
+    lazy var buttom00 = UILabel().text("弹框选择").backgroundColor(.systemCyan).color(.systemRed).fontSize(32).onTap {
+        let menu = PopupMenu(
+            items: [
+                .init(title: "Edit Summary", icon: UIImage(named: "edit_summary")),
+                .init(title: "Edit Transcript", icon: UIImage(named: "edit_transcript")),
+                .init(title: "Transcription", icon: UIImage(named: "translate")),
+                .init(title: "Translate", icon: UIImage(named: "delete"), isDestructive: true)
+            ]
+        )
+//        menu.cornerRadius = 30.h
+//        menu.menuWidth = 300.w
+//        menu.rowHeight = 66.h
+        menu.show(at: CGPoint(x: kkScreenWidth - 16.w, y: 88.h)) { index in
+            print("点击了第 \(index) 项")
+        }
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +58,15 @@ class Widget06ViewController: SuperViewController, UIScrollViewDelegate {
             $0.width.equalTo(260.w)
             $0.height.equalTo(36.h)
         }
+        
+        view.addSubview(buttom00)
+        buttom00.snp.makeConstraints { make in
+            make.left.equalToSuperview()
+            make.height.equalTo(50)
+            make.width.equalTo(150)
+            make.top.equalTo(segmentedView.snp.bottom).offset(50)
+        }
+        
     }
 
     // MARK: - =====================actions==========================
