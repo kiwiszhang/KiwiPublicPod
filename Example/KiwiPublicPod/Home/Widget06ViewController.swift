@@ -13,6 +13,8 @@ class Widget06ViewController: SuperViewController, UIScrollViewDelegate {
     // MARK: -  =====================lazyload=========================
     lazy var segmentedView = CapsuleSegmentedView(items: [], style: .defaultStyle)
 
+    private lazy var cornerRadioDashV = DashedBorderView(cornerRadius: 15.h,lineWidth: 4,lineDashPattern: [4,3],strokeColor: .systemRed).backgroundColor(.systemCyan)
+    
     lazy var buttom00 = UILabel().text("弹框选择").backgroundColor(.systemCyan).color(.systemRed).fontSize(32).onTap {
         let menu = PopupMenu(
             items: [
@@ -67,6 +69,13 @@ class Widget06ViewController: SuperViewController, UIScrollViewDelegate {
             make.top.equalTo(segmentedView.snp.bottom).offset(50)
         }
         
+        view.addSubview(cornerRadioDashV)
+        cornerRadioDashV.snp.makeConstraints { make in
+            make.width.equalTo(330.w)
+            make.height.equalTo(100.h)
+            make.centerX.equalToSuperview()
+            make.top.equalTo(buttom00.snp.bottom).offset(50.h)
+        }
     }
 
     // MARK: - =====================actions==========================
