@@ -1,0 +1,42 @@
+{
+  "name": "BSWHPhotoPicker",
+  "version": "1.0.0",
+  "summary": "图片编辑库",
+  "description": "基于 ZLImageEditor 封装的图片编辑库",
+  "homepage": "https://github.com/kiwiszhang/BSWHPhotoPicker",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "caoguangming": "zhangzhiqiang.mail@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/kiwiszhang/BSWHPhotoPicker.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "15.0"
+  },
+  "swift_versions": [
+    "5.0",
+    "5.1",
+    "5.2"
+  ],
+  "dependencies": {
+    "SnapKit": [
+      "~> 5.7.1"
+    ]
+  },
+  "source_files": "BSWHPhotoPicker/Classes/**/*.{swift,h,m}",
+  "exclude_files": [
+    "BSWHPhotoPicker/Classes/General/ZLWeakProxy.swift",
+    "BSWHPhotoPicker/Classes/**/Resources/**"
+  ],
+  "resource_bundles": {
+    "BSWHPhotoPicker": [
+      "BSWHPhotoPicker/Resources/**/*"
+    ]
+  },
+  "swift_version": "5.2"
+}

@@ -1,4 +1,6 @@
 PODS:
+  - BSWHPhotoPicker (1.0.0):
+    - SnapKit (~> 5.7.1)
   - HandyJSON (5.0.0)
   - Kingfisher (8.6.0)
   - KiwiPublicPod (1.0.0):
@@ -18,6 +20,7 @@ PODS:
   - SwiftGen (6.6.3)
 
 DEPENDENCIES:
+  - BSWHPhotoPicker (from `../../BSWHPhotoPicker-main/`)
   - HandyJSON (= 5.0.0)
   - Kingfisher (~> 8.0)
   - KiwiPublicPod (from `../`)
@@ -38,10 +41,13 @@ SPEC REPOS:
     - SwiftGen
 
 EXTERNAL SOURCES:
+  BSWHPhotoPicker:
+    :path: "../../BSWHPhotoPicker-main/"
   KiwiPublicPod:
     :path: "../"
 
 SPEC CHECKSUMS:
+  BSWHPhotoPicker: 8d710cd92aa63ebb213906d36263b671e78ecbee
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   Kingfisher: 64278f126a815d0e2d391cdf71311b85882c4de0
   KiwiPublicPod: 14e0c7bdf08b8922bb7585b04ec90afb86a1244f
@@ -51,6 +57,6 @@ SPEC CHECKSUMS:
   SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
   SwiftGen: 4993cbf71cbc4886f775e26f8d5c3a1188ec9f99
 
-PODFILE CHECKSUM: b6c704d2ed4a07ce726e6e3891fc0a40479fa43f
+PODFILE CHECKSUM: 281aaea6385462fa9594714726613c23b0bf27a2
 
 COCOAPODS: 1.16.2

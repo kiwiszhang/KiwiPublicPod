@@ -1,0 +1,6 @@
+framework module BSWHPhotoPicker {
+  umbrella header "BSWHPhotoPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -39,5 +39,26 @@ public extension UIApplication {
         }
         return controller
     }
+    
+    class func topTabBarController(controller: UIViewController? = nil) -> UITabBarController? {
+
+        let controller = controller
+            ?? UIApplication.shared.windows.first { $0.isKeyWindow }?.rootViewController
+
+        if let tab = controller as? UITabBarController {
+            return tab
+        }
+
+        if let nav = controller as? UINavigationController {
+            return topTabBarController(controller: nav.visibleViewController)
+        }
+
+        if let presented = controller?.presentedViewController {
+            return topTabBarController(controller: presented)
+        }
+
+        return nil
+    }
+
 }
 

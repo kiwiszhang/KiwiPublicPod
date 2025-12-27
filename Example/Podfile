@@ -24,16 +24,18 @@ target 'KiwiPublicPod_Example' do
   
   #  pod 'WeScan'
   
-  
   # 数据存储
   pod 'SQLite.swift', '~> 0.13.0'
   
   if use_local_pods
-    puts "👉 本地环境：使用开发路径版本 KiwiPublicPod"
+    puts "👉 本地环境：使用开发路径版本"
     pod 'KiwiPublicPod', :path => '../'
+    pod 'BSWHPhotoPicker', :path => '../../BSWHPhotoPicker-main/'
   else
-    puts "🚀 CI 构建：使用远程 tag 版本 KiwiPublicPod"
+    puts "🚀 CI 构建：使用远程 tag 版本"
     pod 'KiwiPublicPod', :git => 'https://github.com/kiwiszhang/KiwiPublicPod.git'
+    pod 'BSWHPhotoPicker', :git => 'https://github.com/kiwiszhang/BSWHPhotoPicker.git'
+
   end
   
 end
