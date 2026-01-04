@@ -100,8 +100,12 @@ open class CapsuleSegmentedView: UIView {
             $0.top.equalToSuperview().offset(contentInset)
             $0.bottom.equalToSuperview().inset(contentInset)
 
-            $0.leading.equalToSuperview().offset(contentInset)
-            $0.trailing.equalToSuperview().multipliedBy(0.5).offset(-contentInset)
+            $0.width.equalToSuperview()
+                .offset(-contentInset * 2)
+                .dividedBy(items.count)
+            selectionLeadingConstraint = $0.leading.equalToSuperview()
+                .offset(contentInset)
+                .constraint
         }
 
 
