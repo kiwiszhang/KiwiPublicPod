@@ -28,6 +28,12 @@ public extension UITableView {
     }
     
     @discardableResult
+    func rowHeightAutomaticDimension() -> Self {
+        rowHeight = UITableView.automaticDimension
+        return self
+    }
+    
+    @discardableResult
     func headerHeight(_ height: CGFloat) -> Self {
         sectionHeaderHeight = height
         return self
