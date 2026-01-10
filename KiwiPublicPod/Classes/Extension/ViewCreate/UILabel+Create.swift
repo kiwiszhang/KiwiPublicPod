@@ -23,6 +23,12 @@ public extension UILabel {
 
 
     @discardableResult
+    func textNoAdjust(_ text: String?) -> Self {
+        self.text = text
+        return self
+    }
+    
+    @discardableResult
     func text(_ text: String?) -> Self {
         self.text = text
         adjustsFontSizeToFitWidth = true
