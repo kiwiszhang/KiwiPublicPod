@@ -72,3 +72,78 @@ public extension UITextView {
     }
     
 }
+
+public class PlaceholderTextView: UITextView {
+
+    private let placeholderLabel = UILabel()
+    public var placeholder: String? {
+        didSet {
+            placeholderLabel.text = placeholder
+        }
+    }
+    public var placeholderColor: UIColor = .lightGray {
+        didSet {
+            placeholderLabel.textColor = placeholderColor
+        }
+    }
+    public override var text: String! {
+        didSet {
+            updatePlaceholderVisibility()
+        }
+    }
+
+    public override var attributedText: NSAttributedString! {
+        didSet {
+            updatePlaceholderVisibility()
+        }
+    }
+
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        placeholderLabel.preferredMaxLayoutWidth = textContainer.size.width
+    }
+
+    public func setupPlaceholder() {
+        placeholderLabel.font = font
+        placeholderLabel.textColor = placeholderColor
+        placeholderLabel.numberOfLines = 0
+        placeholderLabel.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(placeholderLabel)
+
+        NSLayoutConstraint.activate([
+            placeholderLabel.topAnchor.constraint(
+                equalTo: topAnchor,
+                constant: textContainerInset.top
+            ),
+            placeholderLabel.leadingAnchor.constraint(
+                equalTo: leadingAnchor,
+                constant: textContainerInset.left + textContainer.lineFragmentPadding
+            ),
+            placeholderLabel.trailingAnchor.constraint(
+                equalTo: trailingAnchor,
+                constant: -(textContainerInset.right + textContainer.lineFragmentPadding)
+            )
+        ])
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(textDidChange),
+            name: UITextView.textDidChangeNotification,
+            object: self
+        )
+
+        updatePlaceholderVisibility()
+    }
+
+    @objc private func textDidChange() {
+        updatePlaceholderVisibility()
+    }
+
+    private func updatePlaceholderVisibility() {
+        placeholderLabel.isHidden = !text.isEmpty
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+}

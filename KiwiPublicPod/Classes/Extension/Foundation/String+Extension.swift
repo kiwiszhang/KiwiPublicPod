@@ -467,3 +467,10 @@ extension String {
         }
     }
 }
+
+extension String {
+    public var isEmail: Bool {
+        let pattern = #"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"#
+        return NSPredicate(format: "SELF MATCHES %@", pattern).evaluate(with: self)
+    }
+}
