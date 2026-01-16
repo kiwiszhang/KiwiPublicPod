@@ -439,6 +439,7 @@ extension String {
     }
 }
 
+//MARK: -对象转JSON和JSON转对象
 extension Encodable {
     public func toJSONString(pretty: Bool = false) -> String? {
         let encoder = JSONEncoder()
@@ -468,9 +469,18 @@ extension String {
     }
 }
 
+
+//MARK: -判断字符串是否为邮箱
 extension String {
     public var isEmail: Bool {
         let pattern = #"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"#
         return NSPredicate(format: "SELF MATCHES %@", pattern).evaluate(with: self)
+    }
+}
+
+//MARK: -讲一个字符串从另一个字符串移除
+extension String {
+    public mutating func removeWithStr(_ substring: String) {
+        self = self.replacingOccurrences(of: substring, with: "")
     }
 }
